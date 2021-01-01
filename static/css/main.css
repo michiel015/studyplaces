@@ -1,0 +1,45 @@
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 38px;
+}
+
+.top-left {
+    display: flex;
+}
+
+/*go into top-left class and apply this to all divs inside*/
+.nav-wrapper > .top-left > div {
+    margin-right: 20px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+
+.navbar-link {
+    height: 22px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s;
+}
+
+/*configure the <a> links*/
+.navbar-link a {
+    color: #8a8a8a;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+/*if user hovers over this class*/
+.navbar-link:hover {
+    border-bottom: 1px solid black;
+}
+
+.navbar-link a:hover {
+    color: black;
+}
+/*.top-left {*/
+/*    float: left;*/
+/*}*/
+/*.top-right {*/
+/*    float: right;*/
+/*    text-align: right;*/
+/*}*/
