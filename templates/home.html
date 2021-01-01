@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Index</title>
+    <title>Studyplaces</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }} ">
 </head>
 <body>
@@ -22,6 +22,59 @@
                 </div>
             </div>
         </div>
+
+        <div class="content-wrapper">
+            <div class="cards-items-wrapper">
+
+                <div class="cards-item-wrapper">
+                    <div class="cards-img-background" style="background-image: url('https://images.unsplash.com/photo-1534351590666-13e3e96b5017?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8YW1zdGVyZGFtfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60')"></div>
+
+                    <div class="img-text-wrapper">
+                        <div class="cards-review-wrapper">
+<!--                            <img src="https://images.unsplash.com/photo-1459679749680-18eb1eb37418?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8YW1zdGVyZGFtfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">-->
+                            <table>
+                              <thead>
+                                <tr>
+                                    <th>{{column_names[0]}}</th>
+                                    <th>{{column_names[1]}}</th>
+                                    <th>{{column_names[2]}}</th>
+                                </tr>
+                              </thead>
+                                <tbody>
+                                 {% for row in data %}
+                                        <tr>
+                                            <td>{{row[0]}}</td>
+                                            <td>{{row[1]}}</td>
+                                            <td>{{row[2]}}</td>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                        </table>
+                        </div>
+
+                        <div class="subtitle">
+                            Amsterdam
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
     </div>
 </body>
+<script>
+<!--    select all .cards-item-wrapper items-->
+    const cardsItems = document.querySelectorAll('.cards-item-wrapper')
+    cardsItems.forEach(cardsItem => {
+        cardsItem.addEventListener('mouseover', () => {
+            cardsItem.childNodes[1].classList.add('img-darken')
+        })
+
+        cardsItem.addEventListener('mouseout', () => {
+            cardsItem.childNodes[1].classList.remove('img-darken')
+        })
+
+        })
+</script>
 </html>

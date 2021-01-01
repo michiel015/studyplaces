@@ -1,3 +1,16 @@
+/* master styles*/
+body {
+    margin: 0px;
+}
+
+/*use grid to make template columns of 1 fractional unit*/
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+/*navbar styles*/
+/*use flex box to space left and right side of navbar*/
 .nav-wrapper {
     display: flex;
     justify-content: space-between;
@@ -11,6 +24,15 @@
 /*go into top-left class and apply this to all divs inside*/
 .nav-wrapper > .top-left > div {
     margin-right: 20px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+
+/*similar for top-right*/
+.nav-wrapper > .top-right > div {
+    color: black;
+    text-decoration: none;
+    margin-bottom: 20px;
     font-size: 0.9em;
     text-transform: uppercase;
 }
@@ -36,10 +58,74 @@
 .navbar-link a:hover {
     color: black;
 }
-/*.top-left {*/
-/*    float: left;*/
-/*}*/
-/*.top-right {*/
-/*    float: right;*/
-/*    text-align: right;*/
-/*}*/
+
+/*cards styles*/
+/*divide cards into 3 columns*/
+.cards-items-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+/*allow text and images to be on top of each other*/
+.cards-item-wrapper {
+    position: relative;
+}
+
+/*set background image size*/
+.cards-img-background {
+    height: 350px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.img-text-wrapper {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+/*set general style for table in figure*/
+.cards-review-wrapper table, th, tr {
+    border: 1px solid white;
+    border-collapse: collapse;
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+/*change color when hovering over rows of table*/
+.cards-review-wrapper tr:hover {
+     background-color: #f5f5f5;
+ }
+
+/*set table header text color and background color*/
+.cards-review-wrapper th {
+    color: white;
+    background-color: black;
+}
+
+/*text is only visible when you hover over image*/
+.img-text-wrapper .subtitle {
+    font-weight: 600;
+    transition: 1s;
+    color: black;
+}
+
+/*when hovering over pic the subtitle turns green*/
+.img-text-wrapper:hover .subtitle {
+    font-weight: 600;
+    color: white;
+}
+
+.img-darken {
+    transition: 1s;
+    filter: brightness(10%);
+}
