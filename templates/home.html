@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Studyplaces</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }} ">
 </head>
 <body>
     <div class="container">
         <div class="nav-wrapper">
             <div class="top-left">
-                <div class="navbar-link">
+                <div class="navbar-link active-nav-link">
                     <a href="{{ url_for('home') }}">Home</a>
                 </div>
                 <div class="navbar-link">
