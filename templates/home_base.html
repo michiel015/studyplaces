@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Studyplaces</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }} ">
+</head>
+<body>
+    <div class="container">
+        <div class="nav-wrapper">
+            <div class="top-left">
+                <div class="navbar-link active-nav-link">
+                    <a href="{{ url_for('home') }}">Home</a>
+                </div>
+                <div class="navbar-link">
+                    <a href="{{ url_for('about') }}">About</a>
+                </div>
+            </div>
+            <div class="top-right">
+                <div class="navbar-brand">
+                    <div>Studyplaces</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="cards-items-wrapper">
+
+                <div class="cards-item-wrapper">
+                    <div class="cards-img-background" style="background-image: url('https://images.unsplash.com/photo-1534351590666-13e3e96b5017?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8YW1zdGVyZGFtfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60')"></div>
+
+                    <div class="img-text-wrapper">
+                        {% block contents %}{% endblock %}
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</body>
+<script>
+<!--    select all .cards-item-wrapper items-->
+    const cardsItems = document.querySelectorAll('.cards-item-wrapper')
+    cardsItems.forEach(cardsItem => {
+        cardsItem.addEventListener('mouseover', () => {
+            cardsItem.childNodes[1].classList.add('img-darken')
+        })
+
+        cardsItem.addEventListener('mouseout', () => {
+            cardsItem.childNodes[1].classList.remove('img-darken')
+        })
+
+        })
+</script>
+</html>
