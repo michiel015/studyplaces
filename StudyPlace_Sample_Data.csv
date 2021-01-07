@@ -1,4 +1,4 @@
-Locatie,WiFi_Connection ,Laptop_friendly ,Total_spots,Price_consumption  ,Type_of_seating,Accessibility ,Background_noise 
+Locatie, WiFi_Connection ,Laptop_friendly ,Total_spots,Price_consumption  ,Type_of_seating,Accessibility ,Background_noise 
 "Den Haag , Huiskamer Cafe, Den Haag Centraal ,On consumption ,Medium , 30,""Lounge chairs, Longer tables, Individual small tables"",High ,Moderate "
 "Rotterdam, Douwe Egberts Cafe Rotterdam Centraal  ,On consumption ,Medium, 50, ""Lounge chairs, longer tables, Individual small tables"",High,Moderate "
 "Delft, TU Delft Libary ,Students only ,High,100+, ""Individual workings spots, longer tables"",Medium,Low "
