@@ -15,7 +15,8 @@ def home():
         print('could not establish connection to db')
         exit(1)
     c = conn.cursor()
-    c.execute("SELECT * FROM study_locations WHERE test_column_3 = 'test_data_3'")
+    # c.execute("SELECT * FROM study_locations WHERE test_column_3 = 'test_data_3'")
+    c.execute("SELECT * FROM study_locations")
     data = c.fetchall()
     column_names = [description[0] for description in c.description]
     return render_template("home.html", data=data, column_names=column_names)

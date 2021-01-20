@@ -1,32 +1,36 @@
 {% extends 'home_base.html' %}
 
 {% block contents %}
-<div class="cards-review-wrapper">
-<!--                            <img src="https://images.unsplash.com/photo-1459679749680-18eb1eb37418?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8YW1zdGVyZGFtfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">-->
-    <div class="table-title">
-        Top 3 places to study at
-    </div>
-    <table>
-      <thead>
-        <tr>
-            <th>{{column_names[0]}}</th>
-            <th>{{column_names[1]}}</th>
-            <th>{{column_names[2]}}</th>
-        </tr>
-      </thead>
-        <tbody>
-         {% for row in data %}
-                <tr>
-                    <td>{{row[0]}}</td>
-                    <td>{{row[1]}}</td>
-                    <td>{{row[2]}}</td>
-                </tr>
-            {% endfor %}
-        </tbody>
-</table>
-</div>
+<div class="cards-img-background" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/3/3d/TU-Delft-Bibl-1.jpg')"></div>
 
-<div class="subtitle">
-    Amsterdam
+<div class="img-text-wrapper">
+    <div class="cards-review-wrapper">
+    <!--                            <img src="https://images.unsplash.com/photo-1459679749680-18eb1eb37418?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8YW1zdGVyZGFtfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">-->
+        <div class="table-title">
+            TU Delft library
+        </div>
+        <table>
+          <thead>
+            <tr>
+                <th>{{column_names[0]}}</th>
+                <th>{{column_names[1]}}</th>
+                <th>{{column_names[2]}}</th>
+            </tr>
+          </thead>
+            <tbody>
+             {% for row in data %}
+                    <tr>
+                        <td>{{row[0]}}</td>
+                        <td>{{row[1]}}</td>
+                        <td>{{row[2]}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+    </table>
+    </div>
+
+<!--<div class="subtitle">-->
+<!--    Amsterdam-->
+<!--</div>-->
 </div>
 {% endblock %}
