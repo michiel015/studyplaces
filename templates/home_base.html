@@ -27,7 +27,6 @@
 
         <div class="content-wrapper">
             <div class="cards-items-wrapper">
-                <div class="cards-item-wrapper">
                         {% block contents %}{% endblock %}
                 </div>
             </div>
@@ -36,7 +35,7 @@
     </div>
 </body>
 <script>
-<!--    select all .cards-item-wrapper items-->
+<!--    select all .cards-item-wrapper items to make shadow upon hovering over image-->
     const cardsItems = document.querySelectorAll('.cards-item-wrapper')
     cardsItems.forEach(cardsItem => {
         cardsItem.addEventListener('mouseover', () => {

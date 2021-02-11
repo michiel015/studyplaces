@@ -1,2 +1,24 @@
-﻿test_column_1,test_column_2,test_column_3
-test_data_1,test_data_2,test_data_3
+study_location,city,total_score,price_consumptions_norm,access_hours_norm,google_review
+Huiskamer Cafe Den Haag Centraal,Den Haag,7.92,7.92,7.99,7.84
+TU Delft Libary,Delft,7.71,6.19,10.00,6.93
+Universiteit Leiden Campus The Hague,Den Haag,6.71,10.00,9.12,1.00
+August Cafe ,Den Haag ,5.06,3.08,5.35,6.75
+House of Tribes ,Den Haag ,4.95,3.42,4.62,6.80
+Central Libary,Den Haag ,7.11,8.62,4.91,7.79
+Capriole Cafe,Den Haag ,4.52,3.08,1.00,9.49
+Urban Cafe,Den Haag ,5.05,5.15,3.10,6.90
+Coffee Fellows ,Den Haag ,5.57,5.15,4.72,6.85
+HofHouse,Den Haag ,6.11,6.88,3.89,7.56
+CHCO The Hague ,Den Haag ,4.97,1.69,5.35,7.86
+Bagels & Beans Spui,Den Haag ,5.63,6.19,3.64,7.04
+Lebkov & Sons ,Den Haag ,5.84,5.15,5.30,7.05
+Starbucks Den Haag Centraal,Den haag ,6.26,2.04,8.34,8.41
+Douwe Egberts Cafe Rotterdam Centraal,Rotterdam,7.00,6.54,5.79,8.66
+Bagels & Beans ,Rotterdam,6.25,6.19,3.69,8.86
+Rotterdam Centraal - StationsHuiskamer,Rotterdam,7.75,7.92,6.67,8.65
+Dudok,Rotterdam,6.50,3.42,6.09,10.00
+Lebkov & Sons ,Rotterdam,7.04,5.15,7.07,8.91
+Cafe at Home,Rotterdam,4.84,1.00,5.26,8.27
+The Tea Lab,Rotterdam,7.19,8.62,5.21,7.75
+Coffee company,Rotterdam,6.70,5.40,6.04,8.65
+Centrale Bibliotheek Rotterdam,Rotterdam,5.64,6.06,2.86,8.01
