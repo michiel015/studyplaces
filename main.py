@@ -21,7 +21,7 @@ def home():
     conn.row_factory = dict_factory
     c.execute("select * from study_locations")
     data = c.fetchall()
-    c.execute("SELECT study_location FROM study_locations")
+    c.execute("SELECT werkplek FROM study_locations")
     # study_locations_tuples is a list of tuples, so for the location we only need the first element of each tuple
     study_locations_tuples = c.fetchall()
     study_locations_list = [study_locations_tuple[0] for study_locations_tuple in study_locations_tuples]
@@ -41,17 +41,7 @@ def about():
 
 @app.route("/test1")
 def test1():
-    # establish database connection and make cursor
-    try:
-        conn = sqlite3.connect('test.db')
-    except:
-        print('could not establish connection to db')
-        exit(1)
-    c = conn.cursor()
-    c.execute("SELECT * FROM study_locations WHERE test_column_3 = 'test_data_3'")
-    data = c.fetchall()
-    column_names = [description[0] for description in c.description]
-    return render_template("test1.html", data=data, column_names=column_names)
+    return render_template("test1.html")
 
 
 if __name__ == "__main__":

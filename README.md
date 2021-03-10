@@ -6,5 +6,6 @@ Website logic is contained in main.py, by running this file you can view the web
   
 **Todo**  
 * Fix layout and variable naming
-* Make jinja html template and use inheritance for other html files
-* Pass correct variables per city to html cards
+* Create html base for place 
+* Create function that takes place's name and place's data 
+and creates html file for that place using inheritance from base

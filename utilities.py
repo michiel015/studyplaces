@@ -26,9 +26,9 @@ def dict_factory(cursor, row):
 
 
 if __name__ == "__main__":
-    # convert_csv_to_sqlite_db('test.csv')
-    con = sqlite3.connect("test.db")
-    con.row_factory = dict_factory
-    cur = con.cursor()
-    cur.execute("select * from study_locations")
-    print(cur.fetchall()[0]["study_location"])
+    convert_csv_to_sqlite_db('test.csv')
+    # con = sqlite3.connect("test.db")
+    # con.row_factory = dict_factory
+    # cur = con.cursor()
+    # cur.execute("select * from study_locations")
+    # print(cur.fetchall()[0]["study_location"])
