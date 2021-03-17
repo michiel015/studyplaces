@@ -89,6 +89,14 @@ body {
     background-repeat: no-repeat;
 }
 
+.cards-item-wrapper:hover > .cards-img-background {
+    width:100%;
+    height:350px;
+    position:absolute;
+    background-color:#000000;
+    opacity:0.8;
+}
+
 .img-text-wrapper {
     position: absolute;
     top: 0;

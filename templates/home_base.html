@@ -34,18 +34,5 @@
 
     </div>
 </body>
-<script>
-<!--    select all .cards-item-wrapper items to make shadow upon hovering over image-->
-    const cardsItems = document.querySelectorAll('.cards-item-wrapper')
-    cardsItems.forEach(cardsItem => {
-        cardsItem.addEventListener('mouseover', () => {
-            cardsItem.childNodes[1].classList.add('img-darken')
-        })
-
-        cardsItem.addEventListener('mouseout', () => {
-            cardsItem.childNodes[1].classList.remove('img-darken')
-        })
-
-        })
-</script>
+<!--<script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>-->
 </html>
