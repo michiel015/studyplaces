@@ -32,9 +32,20 @@
                     </tr>
             </tbody>
     </table>
-    </div>
-    <div class="cards-review-button">
-    <button onclick="toggleCard()" id="cardButton">Show more</button>
+<!--        <div class="cards-review-button">-->
+<!--        <button onclick="toggleCard()" id="cardButton">Show more</button>-->
+<!--        </div>-->
+     <button data-modal-target="#modal">Open Modal</button>
+      <div class="modal" id="modal">
+        <div class="modal-header">
+          <div class="title">Example Modal</div>
+          <button data-close-button class="close-button">&times;</button>
+        </div>
+        <div class="modal-body">
+            This is test text in the body of the modal
+        </div>
+      </div>
+      <div id="overlay"></div>
     </div>
 </div>
 </div>
