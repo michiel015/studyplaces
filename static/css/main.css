@@ -78,6 +78,7 @@ body {
 /*allow text and images to be on top of each other*/
 .cards-item-wrapper {
     position: relative;
+    margin: 14px;    
 }
 
 /*set background image size*/
@@ -87,6 +88,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    border-radius: 25px;
 }
 
 .cards-item-wrapper:hover > .cards-img-background {
@@ -106,8 +108,8 @@ body {
     align-items: center;
     height: 100%;
     text-align: center;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 20px;
+    padding-right: 20x;
 }
 
 /*set general style for table in figure*/
