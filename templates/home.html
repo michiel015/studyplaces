@@ -8,9 +8,11 @@
     <div class="img-text-wrapper">
     <div class="cards-review-wrapper">
     <!--                            <img src="https://images.unsplash.com/photo-1459679749680-18eb1eb37418?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8YW1zdGVyZGFtfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">-->
+        <div class="ranking-number">
+            {{ loop.index }}
+        </div>
         <div class="table-title">
             {{ location }}
-            {{ loop.index }}
         </div>
         <table>
           <thead>
@@ -35,17 +37,35 @@
 <!--        <div class="cards-review-button">-->
 <!--        <button onclick="toggleCard()" id="cardButton">Show more</button>-->
 <!--        </div>-->
-     <button data-modal-target="#modal">Open Modal</button>
+     <button data-modal-target="#modal">See more</button>
       <div class="modal" id="modal">
         <div class="modal-header">
-          <div class="title">Example Modal</div>
+          <div class="title">{{ location }}</div>
           <button data-close-button class="close-button">&times;</button>
         </div>
         <div class="modal-body">
-            This is test text in the body of the modal
+            <table>
+          <thead>
+            <tr>
+                <th>{{column_names[2]}}</th>
+                <th>{{column_names[3]}}</th>
+                <th>{{column_names[4]}}</th>
+                <th>{{column_names[5]}}</th>
+                <th>{{column_names[6]}}</th>
+            </tr>
+          </thead>
+            <tbody>
+                    <tr>
+                        <td>{{ data[loop.index-1][2] }}</td>
+                        <td>{{ data[loop.index-1][3] }}</td>
+                        <td>{{ data[loop.index-1][4] }}</td>
+                        <td>{{ data[loop.index-1][5] }}</td>
+                        <td>{{ data[loop.index-1][6] }}</td>
+                    </tr>
+            </tbody>
+    </table>
         </div>
       </div>
-      <div id="overlay"></div>
     </div>
 </div>
 </div>

@@ -21,7 +21,7 @@
             </div>
             <div class="top-right">
                 <div class="navbar-brand">
-                    <div>Studyplaces</div>
+                    <div class="navbar-link"><a href="{{ url_for('home') }}">Studyplaces</a></div>
                 </div>
             </div>
         </div>
@@ -31,8 +31,8 @@
                         {% block contents %}{% endblock %}
                 </div>
             </div>
+        <div id="overlay"></div>
         </div>
-
     </div>
 </body>
 <script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>

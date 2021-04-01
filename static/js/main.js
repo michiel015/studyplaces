@@ -1,17 +1,23 @@
 <!--    select all .cards-item-wrapper items to make shadow upon hovering over image-->
 // const cardsItems = document.querySelectorAll('.cards-item-wrapper')
-const cardsItems = document.querySelectorAll('.cards-img-background')
-cardsItems.forEach(cardsItem => {
-    cardsItem.addEventListener('mouseover', () => {
-        cardsItem.childNodes[1].classList.add('img-darken')
-    })
 
-    cardsItem.addEventListener('mouseout', () => {
-        cardsItem.childNodes[1].classList.remove('img-darken')
-    })
+// const cardsItems = document.querySelectorAll('.cards-img-background')
+// cardsItems.forEach(cardsItem => {
+//     cardsItem.addEventListener('mouseover', () => {
+//         cardsItem.classList.add('img-darken')
+//         // cardsItem.childNodes[1].classList.add('img-darken')
+//         // cardsItem.children[1].classList.add('img-darken')
+//     })
+//
+//     cardsItem.addEventListener('mouseout', () => {
+//         cardsItem.classList.remove('img-darken')
+//         // cardsItem.childNodes[1].classList.remove('img-darken')
+//         // cardsItem.children[1].classList.add('img-darken')
+//     })
+//
+//     })
 
-    })
-
+//https://github.com/WebDevSimplified/Vanilla-JavaScript-Modal
 const openModalButtons = document.querySelectorAll('[data-modal-target]')
 const closeModalButtons = document.querySelectorAll('[data-close-button]')
 const overlay = document.getElementById('overlay')
