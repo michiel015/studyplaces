@@ -115,15 +115,21 @@ body {
 }
 
 /*set general style for table in figure*/
-.cards-review-wrapper table, th, tr {
+.cart-review-table table, th, tr {
     border: 1px solid white;
     border-collapse: collapse;
     width: 50%;
     margin-bottom: 20px;
     opacity: 0;
 }
-.img-text-wrapper:hover .cards-review-wrapper table, th, tr {
+.img-text-wrapper:hover .cart-review-table table, th, tr {
   opacity: 1;
+}
+.modal-table table, th, tr {
+  border: 1px solid white;
+    border-collapse: collapse;
+    width: 50%;
+    margin-bottom: 20px;
 }
 /*change color when hovering over rows of table*/
 .cards-review-wrapper tr:hover {
