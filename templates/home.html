@@ -37,8 +37,8 @@
 <!--        <div class="cards-review-button">-->
 <!--        <button onclick="toggleCard()" id="cardButton">Show more</button>-->
 <!--        </div>-->
-     <button data-modal-target="#modal">See more</button>
-      <div class="modal" id="modal">
+     <button data-modal-target="#modal_{{loop.index}}">See more</button>
+      <div class="modal" id="modal_{{loop.index}}">
         <div class="modal-header">
           <div class="title">{{ location }}</div>
           <button data-close-button class="close-button">&times;</button>
