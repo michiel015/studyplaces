@@ -1,0 +1,24 @@
+{% extends 'home_base.html' %}
+
+{% block contents %}
+<table>
+          <thead>
+            <tr>
+                <th>{{column_names[2]}}</th>
+                <th>{{column_names[3]}}</th>
+                <th>{{column_names[4]}}</th>
+                <th>{{column_names[5]}}</th>
+                <th>{{column_names[6]}}</th>
+            </tr>
+          </thead>
+            <tbody>
+                    <tr>
+                        <td>{{ data[0][2] }}</td>
+                        <td>{{ data[0][3] }}</td>
+                        <td>{{ data[0][4] }}</td>
+                        <td>{{ data[0][5] }}</td>
+                        <td>{{ data[0][6] }}</td>
+                    </tr>
+            </tbody>
+    </table>
+{% endblock %}
