@@ -36,17 +36,15 @@
             </tbody>
     </table>
 </div>
-<!--        <div class="cards-review-button">-->
-<!--        <button onclick="toggleCard()" id="cardButton">Show more</button>-->
-<!--        </div>-->
-     <button data-modal-target="#modal_{{loop.index}}">See more</button>
-      <div class="modal" id="modal_{{loop.index}}">
-        <div class="modal-header">
-          <div class="title">{{ location }}</div>
-          <button data-close-button class="close-button">&times;</button>
-        </div>
-        <div class="modal-body">
-            <div class="modal-table">
+         <!-- Trigger/Open The Modal -->
+        <button class="modal-button" href="#myModal_{{loop.index}}">Open Modal</button>
+
+<!-- The Modal -->
+<div id="myModal_{{loop.index}}" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="modal-table">
             <table>
           <thead>
             <tr>
@@ -67,9 +65,10 @@
                     </tr>
             </tbody>
     </table>
+    </div>
+  </div>
 </div>
-        </div>
-      </div>
+
     </div>
 </div>
 </div>
