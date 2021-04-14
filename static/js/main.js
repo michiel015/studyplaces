@@ -17,38 +17,41 @@
 //
 //     })
 
-// Get the button that opens the modal
-var btn = document.querySelectorAll("button.modal-button");
+//Modal 1
+//https://github.com/WebDevSimplified/Vanilla-JavaScript-Modal
+const openModalButtons = document.querySelectorAll('[data-modal-target]')
+const closeModalButtons = document.querySelectorAll('[data-close-button]')
+const overlay = document.getElementById('overlay')
 
-// All page modals
-var modals = document.querySelectorAll('.modal');
+openModalButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const modal = document.querySelector(button.dataset.modalTarget)
+    openModal(modal)
+  })
+})
 
-// Get the <span> element that closes the modal
-var spans = document.getElementsByClassName("close");
+overlay.addEventListener('click', () => {
+  const modals = document.querySelectorAll('.modal.active')
+  modals.forEach(modal => {
+    closeModal(modal)
+  })
+})
 
-// When the user clicks the button, open the modal
-for (var i = 0; i < btn.length; i++) {
- btn[i].onclick = function(e) {
-    e.preventDefault();
-    modal = document.querySelector(e.target.getAttribute("href"));
-    modal.style.display = "block";
- }
+closeModalButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const modal = button.closest('.modal')
+    closeModal(modal)
+  })
+})
+
+function openModal(modal) {
+  if (modal == null) return
+  modal.classList.add('active')
+  overlay.classList.add('active')
 }
 
-// When the user clicks on <span> (x), close the modal
-for (var i = 0; i < spans.length; i++) {
- spans[i].onclick = function() {
-    for (var index in modals) {
-      if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";
-    }
- }
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target.classList.contains('modal')) {
-     for (var index in modals) {
-      if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";
-     }
-    }
+function closeModal(modal) {
+  if (modal == null) return
+  modal.classList.remove('active')
+  overlay.classList.remove('active')
 }
