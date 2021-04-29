@@ -92,17 +92,16 @@ body {
 }
 
 .cards-item-wrapper:hover > .cards-img-background {
-    width:100%;
-    height:350px;
-    position:absolute;
-    background-color:#000000;
-    opacity:0.8;
+    width: 100%;
+    height: 350px;
+    position: absolute;
+    background-color: #000000;
+    opacity :0.8;
 }
 
 .img-text-wrapper {
     position: absolute;
     left: 50%;
-    right: 0; 
     margin-left: auto; 
     margin-right: auto; 
     top: 0;
@@ -117,17 +116,22 @@ body {
 
 /*set general style for table in figure*/
 .cart-review-table table, th, tr {
-    border: 1px solid white;
+    border: 0px solid white;
     border-collapse: collapse;
-    width: 50%;
+    width: 100%;
     margin-bottom: 20px;
     opacity: 0;
+}
+.cart-review-table table {
+ text-align: left;
+ width: 100%;
+ table-layout: fixed;
 }
 .img-text-wrapper:hover .cart-review-table table, th, tr {
   opacity: 1;
 }
 .modal-table table, th, tr {
-  border: 1px solid white;
+  border: 0px solid white;
     border-collapse: collapse;
     width: 50%;
     margin-bottom: 20px;
@@ -140,9 +144,18 @@ body {
 /*set table header text color and background color*/
 .cards-review-wrapper th {
     color: white;
-    background-color: black;
 }
-
+td {
+    border: 1px solid #ccc;
+    position: relative;
+}
+.progress-bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #2BDE73;
+}
 /*text is only visible when you hover over image*/
 .img-text-wrapper .subtitle {
     font-weight: 600;
