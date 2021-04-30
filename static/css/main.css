@@ -110,8 +110,8 @@ body {
     height: 100%;
     text-align: center;
     transform: translateX(-50%);
-    width: 100%;
-}
+    width: 80%;
+  }
 
 /*set general style for table in figure*/
 .cart-review-table table, th, tr {
@@ -126,6 +126,9 @@ body {
  width: 100%;
  table-layout: fixed;
 }
+.cart-review-table th {
+text-align: left;
+  }
 .cards-item-wrapper:hover .cart-review-table table, th, tr {
   opacity: 1;
 }
@@ -144,11 +147,11 @@ body {
   border-radius: 20px;
 }
 #progress-bar::-webkit-progress-bar {
-           border-radius: 20px;
-       }
+  border-radius: 20px;
+}
 #progress-bar::-webkit-progress-value {
-           border-radius: 20px;
-       }
+  border-radius: 20px;
+}     }
 /*text is only visible when you hover over image*/
 .img-text-wrapper .subtitle {
     font-weight: 600;
@@ -167,7 +170,6 @@ body {
     transition: 1s;
     color: black;
 }
-
 /*when hovering over pic the subtitle turns green*/
 .img-text-wrapper:hover .table-title {
     font-weight: 600;
