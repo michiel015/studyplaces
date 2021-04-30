@@ -119,6 +119,7 @@ body {
     border-collapse: collapse;
     width: 100%;
     margin-bottom: 20px;
+    margin-top: 20px;
     opacity: 0;
     padding: 4px;
 }
@@ -138,6 +139,19 @@ text-align: left;
     width: 50%;
     margin-bottom: 20px;
 }
+.modal-table {
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: left;
+}
+.modal-table table {
+width: 100%;
+}
+
 /*set table header text color and background color*/
 .cards-review-wrapper th {
     color: white;

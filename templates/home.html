@@ -4,6 +4,7 @@
 {% for location in study_locations %}
 <div class="cards-item-wrapper">
 <!--<div class="cards-img-background" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/3/3d/TU-Delft-Bibl-1.jpg')"></div>-->
+    <div class="card-review-wrapper"data-modal-target="#modal_{{loop.index}}">
     <div class="cards-img-background" style="background-image: url('{{ data[loop.index-1][7] }}');"></div>
     <div class="ranking-number">
             {{ loop.index }}
@@ -39,9 +40,10 @@
             </tr>
           </thead>
     </table>
- <button data-modal-target="#modal_{{loop.index}}">See more</button>
+    <button data-modal-target="#modal_{{loop.index}}">Lees meer</button>
 </div>
     </div>
+</div>
 </div>
     <!--        <div class="cards-review-button">-->
 <!--        <button onclick="toggleCard()" id="cardButton">Show more</button>-->
@@ -58,33 +60,29 @@
           <thead>
             <tr>
                 <th>{{column_names[2]}}</th>
+                <td>{{ data[loop.index-1][14] }}%</td>
                 <th>{{column_names[3]}}</th>
-                <th>{{column_names[4]}}</th>
+                <td>{{ data[loop.index-1][15] }}%</td></tr>
+                <tr><th>{{column_names[4]}}</th>
+                <td>{{ data[loop.index-1][16] }}%</td>
                 <th>{{column_names[5]}}</th>
-                <th>{{column_names[6]}}</th>
+                <td>{{ data[loop.index-1][17] }}%</td></tr>
+                <tr><th>{{column_names[6]}}</th>
+                <td>{{ data[loop.index-1][18] }}%</td>
                 <th>{{column_names[8]}}</th>
-                <th>{{column_names[9]}}</th>
+                <td>{{ data[loop.index-1][19] }}%</td></tr>
+                <tr><th>{{column_names[9]}}</th>
+                <td>{{ data[loop.index-1][20] }}%</td>
                 <th>{{column_names[10]}}</th>
-                <th>{{column_names[11]}}</th>
+                <td>{{ data[loop.index-1][21] }}%</td></tr>
+                <tr><th>{{column_names[11]}}</th>
+                <td>{{ data[loop.index-1][22] }}%</td>
                 <th>{{column_names[12]}}</th>
-                <th>{{column_names[13]}}</th>
+                <td>{{ data[loop.index-1][23] }}%</td></tr>
+                <tr><th>{{column_names[13]}}</th>
+                <td>{{ data[loop.index-1][24] }}%</td>
             </tr>
           </thead>
-            <tbody>
-                    <tr>
-                        <td>{{ data[loop.index-1][2] }} {{ data[loop.index-1][14] }}%</td>
-                        <td>{{ data[loop.index-1][3] }} {{ data[loop.index-1][15] }}%</td>
-                        <td>{{ data[loop.index-1][4] }} {{ data[loop.index-1][16] }}%</td>
-                        <td>{{ data[loop.index-1][5] }} {{ data[loop.index-1][17] }}%</td>
-                        <td>{{ data[loop.index-1][6] }} {{ data[loop.index-1][18] }}%</td>
-                        <td>{{ data[loop.index-1][8] }} {{ data[loop.index-1][19] }}%</td>
-                        <td>{{ data[loop.index-1][9] }} {{ data[loop.index-1][20] }}%</td>
-                        <td>{{ data[loop.index-1][10] }} {{ data[loop.index-1][21] }}%</td>
-                        <td>{{ data[loop.index-1][11] }} {{ data[loop.index-1][22] }}%</td>
-                        <td>{{ data[loop.index-1][12] }} {{ data[loop.index-1][23] }}%</td>
-                        <td>{{ data[loop.index-1][13] }} {{ data[loop.index-1][24] }}%</td>
-                    </tr>
-            </tbody>
     </table>
 <!--                Change to dynamic url? Or change to website when we deploy-->
                 <a href="http://127.0.0.1:5000/{{ data[loop.index-1][25] }}">Go to location page</a>
