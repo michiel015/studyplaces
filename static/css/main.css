@@ -16,6 +16,7 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 38px;
+    padding-bottom: 30px;
 }
 
 .top-left {
@@ -157,15 +158,26 @@ width: 100%;
     color: white;
 }
 #progress-bar{
-  background-color: #2BDE73;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  background-color: #777;
+  color: rgb(43, 222, 115);
   border-radius: 20px;
 }
 #progress-bar::-webkit-progress-bar {
   border-radius: 20px;
+  background-color: #777;
 }
 #progress-bar::-webkit-progress-value {
   border-radius: 20px;
-}     }
+  background-color: rgb(43, 222, 115);
+}     
+#progress-bar::-moz-progress-bar {
+  border-radius: 20px; 
+  background-color: rgb(43, 222, 115);
+}
 /*text is only visible when you hover over image*/
 .img-text-wrapper .subtitle {
     font-weight: 600;
@@ -208,7 +220,6 @@ width: 100%;
     margin-top: 0.75em;
     margin-bottom: 0.75em;
 }
-
 /* Modal box BEGIN */
 *, *::after, *::before {
   box-sizing: border-box;
