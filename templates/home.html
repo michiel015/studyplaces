@@ -7,7 +7,7 @@
     <div class="card-review-wrapper"data-modal-target="#modal_{{loop.index}}">
     <div class="cards-img-background" style="background-image: url('{{ data[loop.index-1][7] }}');"></div>
     <div class="ranking-number">
-            {{ loop.index }}
+            <u>{{ loop.index }}</u>
         </div>
     <div class="img-text-wrapper">
     <div class="cards-review-wrapper">
@@ -60,27 +60,27 @@
           <thead>
             <tr>
                 <th>{{column_names[2]}}</th>
-                <td>{{ data[loop.index-1][14] }}%</td>
+                <td><progress id="progress-bar"  value="{{ data[loop.index-1][14]}}" max="100"></progress></td>
                 <th>{{column_names[3]}}</th>
-                <td>{{ data[loop.index-1][15] }}%</td></tr>
+                <td><progress id="progress-bar"  value="{{ data[loop.index-1][15]}}" max="100"></progress></td></tr>
                 <tr><th>{{column_names[4]}}</th>
-                <td>{{ data[loop.index-1][16] }}%</td>
+                <td><progress id="progress-bar"  value="{{ data[loop.index-1][16]}}" max="100"></progress></td>
                 <th>{{column_names[5]}}</th>
-                <td>{{ data[loop.index-1][17] }}%</td></tr>
+                <td><progress id="progress-bar"  value="{{ data[loop.index-1][17]}}" max="100"></progress></td></tr>
                 <tr><th>{{column_names[6]}}</th>
-                <td>{{ data[loop.index-1][18] }}%</td>
+                <td><progress id="progress-bar"  value="{{ data[loop.index-1][18]}}" max="100"></progress></td>
                 <th>{{column_names[8]}}</th>
-                <td>{{ data[loop.index-1][19] }}%</td></tr>
+                <td><progress id="progress-bar"  value="{{ data[loop.index-1][19]}}" max="100"></progress></td></tr>
                 <tr><th>{{column_names[9]}}</th>
-                <td>{{ data[loop.index-1][20] }}%</td>
+                <td><progress id="progress-bar"  value="{{ data[loop.index-1][20]}}" max="100"></progress></td>
                 <th>{{column_names[10]}}</th>
-                <td>{{ data[loop.index-1][21] }}%</td></tr>
+                <td><progress id="progress-bar"  value="{{ data[loop.index-1][21]}}" max="100"></progress></td></tr>
                 <tr><th>{{column_names[11]}}</th>
-                <td>{{ data[loop.index-1][22] }}%</td>
+                <td><progress id="progress-bar"  value="{{ data[loop.index-1][22]}}" max="100"></progress></td>
                 <th>{{column_names[12]}}</th>
-                <td>{{ data[loop.index-1][23] }}%</td></tr>
+                <td><progress id="progress-bar"  value="{{ data[loop.index-1][23]}}" max="100"></progress></td></tr>
                 <tr><th>{{column_names[13]}}</th>
-                <td>{{ data[loop.index-1][24] }}%</td>
+                <td><progress id="progress-bar"  value="{{ data[loop.index-1][24]}}" max="100"></progress></td>
             </tr>
           </thead>
     </table>
