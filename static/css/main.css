@@ -288,7 +288,17 @@ width: 100%;
   pointer-events: all;
 }
 /* Modal box END */
+.openingstijden {
+position: absolute;
+}
 
-.opening_hours {
-  text-align: right;
+.google_maps {
+position: relative;
+float: right;
+}
+.page-title {
+  text-align: center;
+}
+h1{
+margin: 0px;
 }

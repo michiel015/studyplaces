@@ -1,6 +1,34 @@
-{% extends 'home_base.html' %}
-
-{% block contents %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Studyplaces</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }} ">
+<!--     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>-->
+</head>
+<body>
+    <div class="container">
+        <div class="nav-wrapper">
+            <div class="top-left">
+                                    <div class="logo">
+                        <a href="{{ url_for('home') }}">
+                        <img src="{{ url_for('static', filename='img/werkplekwijzermini.svg') }}" />
+                    </a>
+                    </div>
+                <div class="navbar-link active-nav-link">
+                    <a href="{{ url_for('home') }}">Home</a>
+                </div>
+                <div class="navbar-link">
+                    <a href="{{ url_for('about') }}">About</a>
+                </div>
+            </div>
+            <div class="top-right">
+                <div class="navbar-brand">
+                </div>
+            </div>
+        </div>
 <style>
 .row {
   width: 1000px;
@@ -8,10 +36,16 @@
 
 .column {
   text-align: left;
-  width: 1000px;
+  width: 100%;
 }
+.openingstijden {
+  text-align: left;
+  width: 80%;
 </style>
-
+<div class="page-title">
+<h1>{{ data[0][0] }}</h1>
+</div>
+&nbsp;
 <div class="row">
     <div class="column">
         <table>
@@ -44,7 +78,7 @@
             </table>
     </div>
 &nbsp;
-    <div class="column">
+    <div class="openingstijden">
             <table>
                 <tr><th>{{column_names[26]}}</th><td>{{ data[0][26] }}</td></tr>
                 <tr><th>{{column_names[27]}}</th><td>{{ data[0][27] }}</td></tr>
@@ -53,7 +87,10 @@
                 <tr><th>{{column_names[30]}}</th><td>{{ data[0][30] }}</td></tr>
                 <tr><th>{{column_names[31]}}</th><td>{{ data[0][31] }}</td></tr>
                 <tr><th>{{column_names[32]}}</th><td>{{ data[0][32] }}</td></tr>
+                <div class="google_maps">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2451.896877531952!2d4.3224824153329315!3d52.08160707973356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5b717a1837237%3A0x365485c37a7a8ef2!2sStationsHuiskamer!5e0!3m2!1snl!2snl!4v1620849357559!5m2!1snl!2snl" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
             </table>
     </div>
 </div>
-{% endblock %}
+        </body>
+        </html>
