@@ -16,7 +16,7 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 38px;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
 }
 
 .top-left {
@@ -115,7 +115,7 @@ body {
   }
 
 /*set general style for table in figure*/
-.cart-review-table table, th, tr {
+.card-review-table table, th, tr {
     border: 0px solid white;
     border-collapse: collapse;
     width: 100%;
@@ -124,14 +124,14 @@ body {
     opacity: 0;
     padding: 4px;
 }
-.cart-review-table table {
+.card-review-table table {
  width: 100%;
  table-layout: fixed;
 }
-.cart-review-table th {
+.card-review-table th {
 text-align: left;
   }
-.cards-item-wrapper:hover .cart-review-table table, th, tr {
+.cards-item-wrapper:hover .card-review-table table, th, tr {
   opacity: 1;
 }
 .modal-table table, th, tr {
@@ -288,17 +288,29 @@ width: 100%;
   pointer-events: all;
 }
 /* Modal box END */
-.openingstijden {
-position: absolute;
-}
-
-.google_maps {
-position: relative;
-float: right;
-}
 .page-title {
   text-align: center;
 }
 h1{
 margin: 0px;
+}
+.row {
+  width: 92.5%;
+}
+.column {
+  text-align: left;
+  width: 100%;
+  margin-left: 5%;
+}
+.location_data {
+  text-align: left;
+  width: 100%;
+  margin-left: 5%;
+  display: inline-flex;
+}
+.openingstijden{
+  width: 50%;
+}
+.location_description{
+  margin-right: 10%;
 }

@@ -29,19 +29,6 @@
                 </div>
             </div>
         </div>
-<style>
-.row {
-  width: 1000px;
-}
-
-.column {
-  text-align: left;
-  width: 100%;
-}
-.openingstijden {
-  text-align: left;
-  width: 80%;
-</style>
 <div class="page-title">
 <h1>{{ data[0][0] }}</h1>
 </div>
@@ -78,8 +65,18 @@
             </table>
     </div>
 &nbsp;
-    <div class="openingstijden">
+    <div class="location_data">
+        <div class="location_description">
+                <b>Totale beoordeling {{ data[0][0] }}:</b>
+                <br></br>
+                <li>{{ data[0][33] }}</li>
+                <li>{{ data[0][34] }}</li>
+                <li>{{ data[0][35] }}</li>
+                <li>{{ data[0][36] }}</li>
+                <li><b>Totale score: {{ data[0][14] }}%</b></li></div>
+            <div class="openingstijden">
             <table>
+                <tr><th><b>Openingstijden:</b></td></tr>
                 <tr><th>{{column_names[26]}}</th><td>{{ data[0][26] }}</td></tr>
                 <tr><th>{{column_names[27]}}</th><td>{{ data[0][27] }}</td></tr>
                 <tr><th>{{column_names[28]}}</th><td>{{ data[0][28] }}</td></tr>
@@ -87,10 +84,10 @@
                 <tr><th>{{column_names[30]}}</th><td>{{ data[0][30] }}</td></tr>
                 <tr><th>{{column_names[31]}}</th><td>{{ data[0][31] }}</td></tr>
                 <tr><th>{{column_names[32]}}</th><td>{{ data[0][32] }}</td></tr>
+            </table></div>
                 <div class="google_maps">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2451.896877531952!2d4.3224824153329315!3d52.08160707973356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5b717a1837237%3A0x365485c37a7a8ef2!2sStationsHuiskamer!5e0!3m2!1snl!2snl!4v1620849357559!5m2!1snl!2snl" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
-            </table>
-    </div>
+<iframe src="{{ data[0][37] }}" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
+</div>
 </div>
         </body>
         </html>
