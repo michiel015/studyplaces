@@ -250,9 +250,6 @@ width: 100%;
 
 .modal-header {
   padding: 10px 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   border-bottom: 1px solid black;
 }
 
@@ -300,10 +297,16 @@ margin: 0px;
 .row {
   width: 92.5%;
 }
-.column {
+.data-table {
   text-align: left;
   width: 100%;
   margin-left: 5%;
+}
+.data-table td {
+  border: 1px solid grey;
+}
+.data-table th {
+  border: 1px solid grey;
 }
 .location_data {
   text-align: left;
@@ -316,4 +319,28 @@ margin: 0px;
 }
 .location_description{
   margin-right: 10%;
+}
+.close-button {
+    top: 0;
+    right: 0;
+    text-align: right;
+    font-weight: 800;
+    font-size: 1.25em;
+    position: absolute;
+    z-index: 1;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: 0.5em;
+    margin-bottom: 0.75em;
+    color: black;
+    }
+.modal-title{
+  font-weight: bold;
+}
+
+button {
+  color: #FFF;
+  background-color: #b0852a;
+  border: 1px solid #b0852a;
+  border-radius: 6px;
 }
