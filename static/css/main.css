@@ -193,23 +193,26 @@ width: 100%;
 /*text is only visible when you hover over image*/
 .img-text-wrapper .table-title {
     font-weight: 600;
-    transition: 1s;
-    color: black;
-}
-/*when hovering over pic the subtitle turns green*/
-.img-text-wrapper:hover .table-title {
-    font-weight: 600;
     color: white;
-}
-
-.img-darken {
-    transition: 1s;
-    filter: brightness(10%);
 }
 .ranking-number {
     top: 0;
     left: 0;
     text-align: left;
+    color: #fff;
+    font-weight: 800;
+    font-size: 1.25em;
+    position: absolute;
+    z-index: 1;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
+}
+.total-score {
+    top: 0;
+    right: 0;
+    text-align: right;
     color: #fff;
     font-weight: 800;
     font-size: 1.25em;

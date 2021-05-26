@@ -9,6 +9,9 @@
     <div class="ranking-number">
             <u>{{ loop.index }}</u>
         </div>
+         <div class="total-score">
+            {{ data[loop.index-1][14]}}%
+        </div>
     <div class="img-text-wrapper">
     <div class="cards-review-wrapper">
     <!--                            <img src="https://images.unsplash.com/photo-1459679749680-18eb1eb37418?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8YW1zdGVyZGFtfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">-->
@@ -85,7 +88,7 @@
           </thead>
     </table>
 <!--                Change to dynamic url? Or change to website when we deploy-->
-                <a href="http://127.0.0.1:5000/{{ data[loop.index-1][25] }}">Go to location page</a>
+                <a href="http://127.0.0.1:5000/{{ data[loop.index-1][25] }}">Ga naar locatie pagina</a>
 <!--                <a href="url_for('location_page', variable={{ data[loop.index-1][25] }})">Go to location page</a>-->
 </div>
         </div>
