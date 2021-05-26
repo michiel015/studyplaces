@@ -78,11 +78,14 @@ def location_page(variable):
     # c.execute("SELECT total_score, price_consumptions_norm, access_hours_norm, google_review FROM study_locations "
     #           "where city = 'Delft'")
     # data = c.fetchall()
+
     if variable in study_locations_list:
         c.execute("SELECT * FROM study_locations WHERE url_name = '{idf}'".format(idf=variable))
         data1 = c.fetchall()
         # data1 = c.execute("SELECT werkplek FROM study_locations WHERE werkplek = 'TU Delft Bibliotheek'")
-    return render_template("modal.html", study_locations=variable, data=data1, column_names=column_names)
+        return render_template("modal.html", study_locations=variable, data=data1, column_names=column_names)
+    else:
+        return render_template("404.html")
 
 
 if __name__ == "__main__":
