@@ -87,8 +87,7 @@
             </tr>
           </thead>
     </table>
-<!--                Change to dynamic url? Or change to website when we deploy-->
-                <a href="http://127.0.0.1:5000/{{ data[loop.index-1][25] }}">Ga naar locatie pagina</a>
+                <a href="{{ url_for('location_page', variable=data[loop.index-1][25]) }}">Ga naar locatie pagina</a>
 <!--                <a href="url_for('location_page', variable={{ data[loop.index-1][25] }})">Go to location page</a>-->
 </div>
         </div>

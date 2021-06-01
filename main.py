@@ -5,12 +5,14 @@ from flask import Flask, render_template, url_for
 from utilities import *
 app = Flask(__name__)
 
+db_location = '/var/www/werkplekwijzer/werkplekwijzer/test.db'
+# db_location = 'test.db'
 
 @app.route("/")
 def home():
     # establish database connection and make cursor
     try:
-        conn = sqlite3.connect('test.db')
+        conn = sqlite3.connect(db_location)
     except:
         print('could not establish connection to db')
         exit(1)
@@ -53,7 +55,7 @@ def test1():
 def location_page(variable):
     # establish database connection and make cursor
     try:
-        conn = sqlite3.connect('test.db')
+        conn = sqlite3.connect(db_location)
     except:
         print('could not establish connection to db')
         exit(1)
