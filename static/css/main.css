@@ -114,7 +114,11 @@ body {
     transform: translateX(-50%);
     width: 80%;
   }
-
+@media screen and (max-width: 1000px) {
+  .img-text-wrapper {
+    width: 100%;
+  }
+}
 /*set general style for table in figure*/
 .card-review-table table, th, tr {
     border: 0px solid white;
@@ -199,9 +203,14 @@ width: 100%;
 }
 @media screen and (max-width: 1000px) {
   .table-title {
-    font-size: 80%;
+    font-size: 90%;
     margin-top: 20%;
     font-weight: 800;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .card-review-table th {
+    font-size: 90%;
   }
 }
 .ranking-number {
@@ -250,7 +259,6 @@ width: 100%;
   width: auto;
   max-width: 80%;
   text-align: center;
-
 }
 
 .modal.active {
@@ -335,6 +343,11 @@ margin: 0px;
 }
 @media screen and (max-width: 1000px) {
   .location_description {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .modal {
     width: 100%;
   }
 }
