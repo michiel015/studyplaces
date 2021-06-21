@@ -50,9 +50,13 @@ def about():
 def test1():
     return render_template("test1.html")
 
-@app.route("/sitemap")
+@app.route("/sitemap.xml")
 def sitemap():
     return render_template("sitemap.xml")
+
+@app.route("/robot.txt")
+def robot():
+    return render_template("robot.txt")
 
 @app.route('/<variable>', methods=['GET'])
 def location_page(variable):

@@ -5,9 +5,11 @@
     <title>Werkplekwijzer - Vind de beste werkplek bij jou in de buurt</title>
     <meta name="description" content="Een goede werkplek vinden buiten kantoor kan een uitdaging zijn. Werkplekwijzer beoordeelt werkplekken in Nederland op verschillende criteria zodat jij de beste werkplek kunt vinden.">
     <meta name="keywords" content="werkplek, werkplekwijzer, flexwerken, werkplekken, rotterdam, amsterdam, den haag, delft">
+    <meta name="viewport" content="width=960px">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }} ">
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.png') }}" alt="cofee icon"/>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-199199636-1"></script>
     <script>
   window.dataLayer = window.dataLayer || [];
@@ -24,7 +26,7 @@
             <div class="top-left">
                                     <div class="logo">
                         <a href="{{ url_for('home') }}">
-                        <img src="{{ url_for('static', filename='img/werkplekwijzermini.svg') }}" />
+                        <img src="{{ url_for('static', filename='img/werkplekwijzermini.svg') }}" alt="website logo"/>
                     </a>
                     </div>
                 <div class="navbar-link active-nav-link">
@@ -44,8 +46,11 @@
                         {% block contents %}{% endblock %}
                 </div>
             </div>
-        <div id="overlay"></div>
         </div>
+    </div>
+    <div class="navbar-text">
+                    <h1>Werkplekwijzer - Vind de beste werkplek bij jou in de buurt</h1>
+                    <h4>Een goede werkplek vinden buiten kantoor kan een uitdaging zijn. Werkplekwijzer beoordeelt werkplekken in Nederland op verschillende criteria zodat jij de beste werkplek kunt vinden. Wij maken scoreboards en delen ervaringen over werkplekken in jouw omgeving. Hiermee kan je op werkplekwijzer de beste keuze maken voor een werkplek buiten kantoor.</h4>
     </div>
 </body>
 <script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>

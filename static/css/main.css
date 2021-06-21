@@ -75,7 +75,11 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
-
+@media screen and (max-width: 1000px) {
+  .cards-items-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  }
+}
 /*allow text and images to be on top of each other*/
 .cards-item-wrapper {
     position: relative;
@@ -133,6 +137,16 @@ body {
 .card-review-table table {
  width: 90%;
  table-layout: fixed;
+}
+@media screen and (max-width: 1000px) {
+  .card-review-table table {
+ width: 90%;
+ table-layout: fixed;
+left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto;
+       }
 }
 .card-review-table th {
 text-align: left;
@@ -200,18 +214,6 @@ width: 100%;
 .img-text-wrapper .table-title {
     font-weight: 600;
     color: white;
-}
-@media screen and (max-width: 1000px) {
-  .table-title {
-    font-size: 90%;
-    margin-top: 20%;
-    font-weight: 800;
-  }
-}
-@media screen and (max-width: 1000px) {
-  .card-review-table th {
-    font-size: 90%;
-  }
 }
 .ranking-number {
     top: 0;
@@ -379,4 +381,12 @@ button {
   padding-left: 38px;
   padding-right: 38px;
   max-width: 1140px;
+}
+.navbar-text {
+  padding-left: 38px;
+  padding-right: 38px;
+  max-width: 1140px;
+}
+h4 {
+  font-weight: normal;
 }
