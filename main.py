@@ -5,8 +5,8 @@ from flask import Flask, render_template, url_for
 from utilities import *
 app = Flask(__name__)
 
-db_location = '/var/www/werkplekwijzer/werkplekwijzer/test.db'
-# db_location = 'test.db'
+# db_location = '/var/www/werkplekwijzer/werkplekwijzer/test.db'
+db_location = 'test.db'
 
 @app.route("/")
 def home():
