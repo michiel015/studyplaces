@@ -5,8 +5,7 @@
     <title>Flexwerken bij {{ data[0][0] }} - Werkplekwijzer.nl </title>
     <meta name="description" content="Ben je op zoek naar een fijne werkplek en goed internet? Neem eens een kijkje bij {{ data[0][0] }}. Bekijk hier hoe goed de werkplek scoort.">
     <meta name="keywords" content="werkplek, werkplekwijzer, flexwerken, werkplekken, rotterdam, amsterdam, den haag, delft, {{ data[0][0] }}">
-    <meta name="viewport" content="width=960px">
-    <link rel="icon" href="{{ url_for('static', filename='img/favicon.png') }}" alt="cofee icon"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">    <link rel="icon" href="{{ url_for('static', filename='img/favicon.png') }}" alt="cofee icon"/>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }} ">
@@ -49,6 +48,7 @@
 </div>
 &nbsp;
 <div class="row">
+    <div class="mobileHide">
     <div class="data-table">
         <table>
               <thead>
@@ -59,7 +59,7 @@
                     <td><progress id="progress-bar"  value="{{ data[0][15] }}" max="100"></progress></td></tr>
                     <tr><th>&#128338;   {{column_names[4]}}</th>
                     <td><progress id="progress-bar"  value="{{ data[0][16] }}" max="100"></progress></td>
-                    <th>&#129302;   {{column_names[5]}}</th>
+                    <th>&#128202;   {{column_names[5]}}</th>
                     <td><progress id="progress-bar"  value="{{ data[0][17] }}" max="100"></progress></td></tr>
                     <tr><th>&#128225;   {{column_names[6]}}</th>
                     <td><progress id="progress-bar"  value="{{ data[0][18] }}" max="100"></progress></td>
@@ -79,7 +79,41 @@
               </thead>
             </table>
     </div>
+</div>
+    <div class="mobileShow">
+<div class="data-table">
+        <table>
+              <thead>
+                <tr>
+                    <th>&#11088;    {{column_names[2]}}</th>
+                    <td><progress id="progress-bar"  value="{{ data[0][14] }}" max="100"></progress></td></tr>
+                    <tr><th>&#128182;   {{column_names[3]}}</th>
+                    <td><progress id="progress-bar"  value="{{ data[0][15] }}" max="100"></progress></td></tr>
+                    <tr><th>&#128338;   {{column_names[4]}}</th>
+                    <td><progress id="progress-bar"  value="{{ data[0][16] }}" max="100"></progress></td></tr>
+                    <tr><th>&#128202;   {{column_names[5]}}</th>
+                    <td><progress id="progress-bar"  value="{{ data[0][17] }}" max="100"></progress></td></tr>
+                    <tr><th>&#128225;   {{column_names[6]}}</th>
+                    <td><progress id="progress-bar"  value="{{ data[0][18] }}" max="100"></progress></td></tr>
+                    <tr><th>&#128694;   {{column_names[8]}}</th>
+                    <td><progress id="progress-bar"  value="{{ data[0][19] }}" max="100"></progress></td></tr>
+                    <tr><th>&#128187;   {{column_names[9]}}</th>
+                    <td><progress id="progress-bar"  value="{{ data[0][20] }}" max="100"></progress></td></tr>
+                    <tr><th>&#128715;&#65039; {{column_names[10]}}</th>
+                    <td><progress id="progress-bar"  value="{{ data[0][21] }}" max="100"></progress></td></tr>
+                    <tr><th>&#127860;   {{column_names[11]}}</th>
+                    <td><progress id="progress-bar"  value="{{ data[0][22] }}" max="100"></progress></td></tr>
+                    <tr><th>&#129681;   {{column_names[12]}}</th>
+                    <td><progress id="progress-bar"  value="{{ data[0][23] }}" max="100"></progress></td></tr>
+                    <tr><th>&#128164;   {{column_names[13]}}</th>
+                    <td><progress id="progress-bar"  value="{{ data[0][24] }}" max="100"></progress></td>
+                </tr>
+              </thead>
+            </table>
+    </div>
+</div>
 &nbsp;
+<div class="mobileHide">
     <div class="location_data">
         <div class="location_description">
                 <b>Totale beoordeling {{ data[0][0] }}:</b>
@@ -106,5 +140,35 @@
 </div>
 </div>
     </div>
+    <div class="mobileShow">
+<div class="location_data">
+        <div class="location_description">
+                <b>Totale beoordeling {{ data[0][0] }}:</b>
+                <br></br>
+                <li>{{ data[0][33] }}</li>
+                <li>{{ data[0][34] }}</li>
+                <li>{{ data[0][35] }}</li>
+                <li>{{ data[0][36] }}</li>
+                <li>Prijs koffie Americano: €{{ data[0][38] }}</li>
+                <li><b>Totale score: {{ data[0][14] }}%</b></li></div>
+                
+</div>
+<div class="google_maps">
+<iframe src="{{ data[0][37] }}" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
+<div class="openingstijden">
+            <table>
+                <tr><b>Openingstijden:</b></tr>
+                <tr><th>{{column_names[26]}}</th><td>{{ data[0][26] }}</td></tr>
+                <tr><th>{{column_names[27]}}</th><td>{{ data[0][27] }}</td></tr>
+                <tr><th>{{column_names[28]}}</th><td>{{ data[0][28] }}</td></tr>
+                <tr><th>{{column_names[29]}}</th><td>{{ data[0][29] }}</td></tr>
+                <tr><th>{{column_names[30]}}</th><td>{{ data[0][30] }}</td></tr>
+                <tr><th>{{column_names[31]}}</th><td>{{ data[0][31] }}</td></tr>
+                <tr><th>{{column_names[32]}}</th><td>{{ data[0][32] }}</td></tr>
+            </table></div>
+</div>
+    </div>
+                </div>
+</div>
 </body>
         </html>
