@@ -2,11 +2,18 @@
 # __author__: Adarsh Kalikadien #
 import sqlite3
 from flask import Flask, render_template, url_for
+import socket
+
 from utilities import *
 app = Flask(__name__)
 
-db_location = '/var/www/werkplekwijzer/werkplekwijzer/test.db'
-# db_location = 'test.db'
+hostname = socket.gethostname()
+
+if hostname == 'werkplekwijzer':
+    db_location = '/var/www/werkplekwijzer/werkplekwijzer/test.db'
+else:
+    db_location = 'test.db'
+
 
 @app.route("/")
 def home():
@@ -50,13 +57,16 @@ def about():
 def test1():
     return render_template("test1.html")
 
+
 @app.route("/sitemap.xml")
 def sitemap():
     return render_template("sitemap.xml")
 
+
 @app.route("/robot.txt")
 def robot():
     return render_template("robot.txt")
+
 
 @app.route('/<variable>', methods=['GET'])
 def location_page(variable):
