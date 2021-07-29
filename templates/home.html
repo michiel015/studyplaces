@@ -10,7 +10,7 @@
             <u>{{ loop.index }}</u>
         </div>
          <div class="total-score">
-            {{ data[loop.index-1][14]}}%
+            {{ data[loop.index-1][14] / 10}}
         </div>
     <div class="img-text-wrapper">
     <div class="cards-review-wrapper">
@@ -92,6 +92,8 @@
 </div>
         </div>
       </div>
+    {% if loop.index % 6 == 0 %}<br><br><br>
+    {% endif %}
 </div>
 {% endfor %}
 {% endblock %}
