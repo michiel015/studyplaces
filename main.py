@@ -1,7 +1,8 @@
-# -*- coding: utf-8 -*- 
 # __author__: Adarsh Kalikadien #
 import sqlite3
 from flask import Flask, render_template, url_for
+import socket
+
 from utilities import *
 app = Flask(__name__)
 
@@ -11,6 +12,7 @@ if hostname == 'werkplekwijzer':
     db_location = '/var/www/werkplekwijzer/werkplekwijzer/test.db'
 else:
     db_location = 'test.db'
+
 
 @app.route("/")
 def home():
@@ -36,27 +38,23 @@ def home():
     # study_locations_tuples is a list of tuples, so for the location we only need the first element of each tuple
     study_locations_tuples = c.fetchall()
     study_locations_list = [study_locations_tuple[0] for study_locations_tuple in study_locations_tuples]
-
     # old query in which a single location is fetched
     # c.execute("SELECT total_score, price_consumptions_norm, access_hours_norm, google_review FROM study_locations "
     #           "where city = 'Delft'")
     # data = c.fetchall()
-
     return render_template("home.html", study_locations=study_locations_list, data=data, column_names=column_names)
-
-
 @app.route("/about")
 def about():
     return render_template("about.html")
-
-
 @app.route("/test1")
 def test1():
     return render_template("test1.html")
 
+
 @app.route("/sitemap.xml")
 def sitemap():
     return render_template("sitemap.xml")
+
 
 @app.route("/robot.txt")
 def robot():
@@ -90,12 +88,10 @@ def location_page(variable):
     # study_locations_tuples is a list of tuples, so for the location we only need the first element of each tuple
     study_locations_tuples = c.fetchall()
     study_locations_list = [study_locations_tuple[-1] for study_locations_tuple in study_locations_tuples]
-
     # old query in which a single location is fetched
     # c.execute("SELECT total_score, price_consumptions_norm, access_hours_norm, google_review FROM study_locations "
     #           "where city = 'Delft'")
     # data = c.fetchall()
-
     if variable in study_locations_list:
         c.execute("SELECT * FROM study_locations WHERE url_name = '{idf}'".format(idf=variable))
         data1 = c.fetchall()
@@ -103,7 +99,5 @@ def location_page(variable):
         return render_template("modal.html", study_locations=variable, data=data1, column_names=column_names)
     else:
         return render_template("404.html")
-
-
 if __name__ == "__main__":
     app.run(debug=True) 
