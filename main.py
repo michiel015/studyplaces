@@ -43,9 +43,13 @@ def home():
     #           "where city = 'Delft'")
     # data = c.fetchall()
     return render_template("home.html", study_locations=study_locations_list, data=data, column_names=column_names)
+
+
 @app.route("/about")
 def about():
     return render_template("about.html")
+
+
 @app.route("/test1")
 def test1():
     return render_template("test1.html")
@@ -60,9 +64,11 @@ def sitemap():
 def robot():
     return render_template("robot.txt")
 
+
 @app.route("/plek_toevoegen")
 def plek_toevoegen():
     return render_template("plek_toevoegen.html")
+
 
 @app.route('/<variable>', methods=['GET'])
 def location_page(variable):
@@ -99,5 +105,7 @@ def location_page(variable):
         return render_template("modal.html", study_locations=variable, data=data1, column_names=column_names)
     else:
         return render_template("404.html")
+
+
 if __name__ == "__main__":
     app.run(debug=True) 

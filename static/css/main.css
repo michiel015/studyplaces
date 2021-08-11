@@ -4,6 +4,18 @@ body {
     margin: 0px;
 }
 
+/* change vertical spacing of list elements */
+li{
+  margin: 10px 0;
+}
+
+/* set indentation of unordered list to 0*/
+ul
+{
+margin: 0;
+padding: 0;
+}
+
 /*use grid to make template columns of 1 fractional unit*/
 .container {
     display: grid;
