@@ -1,7 +1,15 @@
+/* define variables that are used globally*/
+:root {
+	 --star-size: 30px;
+	 --star-color: #fff;
+	 --star-background: #fc0;
+     --page-background: #faffff;
+}
 /* master styles*/
 body {
     font-family: 'Lato', sans-serif;
     margin: 0px;
+    background-color: var(--page-background);
 }
 
 /* change vertical spacing of list elements */
@@ -38,7 +46,7 @@ padding: 0;
     position: fixed;  /* fix position to top so navbar stays visible when scrolling */
     top: 0;
     display: flex;
-    background-color: rgba(255, 255, 255, 0.91);
+    background-color: var(--page-background);
     width: 70%;
     margin-top: 10px;
 }
@@ -405,9 +413,11 @@ button {
   max-width: 1140px;
 }
 .navbar-text {
-  padding-left: 38px;
-  padding-right: 38px;
-  max-width: 1140px;
+  text-align: center;
+  vertical-align: middle;
+  /*padding-left: 38px;*/
+  /*padding-right: 38px;*/
+  /*max-width: 1140px;*/
 }
 h4 {
   font-weight: normal;
@@ -443,4 +453,22 @@ h4 {
 .img-darken {
     /*transition: 1s;*/
     filter: brightness(30%);
+}
+
+/* define unicode characters (stars) for usage in rating */
+/* source: method 5 of https://css-tricks.com/five-methods-for-five-star-ratings/ */
+
+ .Stars {
+	 --percent: calc(var(--rating) / 5 * 100%);
+	 display: inline-block;
+	 font-size: var(--star-size);
+	 font-family: Times;
+	 line-height: 1;
+}
+ .Stars::before {
+	 content: '★★★★★';
+	 letter-spacing: 3px;
+	 background: linear-gradient(90deg, var(--star-background) var(--percent), var(--star-color) var(--percent));
+	 -webkit-background-clip: text;
+	 -webkit-text-fill-color: transparent;
 }

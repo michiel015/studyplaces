@@ -23,7 +23,8 @@
           <thead>
             <tr>
                 <th>&#11088; {{column_names[2]}}</th>
-                <td><progress id="progress-bar"  value="{{ data[loop.index-1][14]}}" max="100"></progress></td>
+<!--                <td><progress id="progress-bar"  value="{{ data[loop.index-1][14]}}" max="100"></progress></td>-->
+                <td><div class="Stars" style="--rating: ({{ data[loop.index-1][14]}}/100)*5;" aria-label="Rating of this product is 2.3 out of 5."></div></td>
             </tr>
             <tr>
                 <th>&#128182; {{column_names[3]}}</th>
