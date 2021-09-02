@@ -9,7 +9,6 @@
 body {
     font-family: 'Lato', sans-serif;
     margin: 0px;
-}
     background-color: var(--page-background);
 }
 
@@ -25,7 +24,7 @@ margin: 0;
 padding: 0;
 }
 /*use grid to make template columns of 1 fractional unit*/
-.container {
+.content-wrapper {
     display: grid;
     grid-template-columns: 1fr;
     width: 90%;
@@ -35,20 +34,27 @@ padding: 0;
 /*navbar styles*/
 /*use flex box to space left and right side of navbar*/
 .nav-wrapper {
-    z-index: 3;
     display: flex;
     justify-content: space-between;
-    padding: 38px;
-    padding-bottom: 20px;
+    margin-bottom: 20px;
+    z-index: 999;
+    width: 100%;
+    background-color: #FFF!important;
+    padding-bottom: 40px;
 }
 
 .top-left {
-    position: fixed;  /* fix position to top so navbar stays visible when scrolling */
-    top: 0;
     display: flex;
-    background-color: var(--page-background);
-    width: 70%;
-    margin-top: 10px;
+    width: 100%;
+    background-color: #FFF;
+    padding-left: 5.5%;
+        top: 0;
+    position: fixed;
+    z-index: 999;    
+    border-bottom: 1px solid #c7c4c4;
+    border-top: 1px solid #c7c4c4;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 /*go into top-left class and apply this to all divs inside*/
@@ -71,8 +77,8 @@ padding: 0;
     height: 22px;
     border-bottom: 1px solid transparent;
     transition: border-bottom 0.5s;
+    margin-top: 0.6%;
 }
-
 /*configure the <a> links*/
 .navbar-link a {
     color: #8a8a8a;
