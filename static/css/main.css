@@ -36,7 +36,6 @@ padding: 0;
 .nav-wrapper {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
     z-index: 999;
     width: 100%;
     background-color: #FFF!important;
