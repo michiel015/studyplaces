@@ -23,6 +23,20 @@ ul
 margin: 0;
 padding: 0;
 }
+
+/*let filter options be in center of page*/
+.filter-options {
+    text-align: center;
+}
+.filter-options > ul {
+    display: inline-block;
+}
+
+.filter-options > ul > li {
+    display: inline-block;
+    padding-left: 30px;
+}
+
 /*use grid to make template columns of 1 fractional unit*/
 .content-wrapper {
     display: grid;

@@ -45,6 +45,96 @@ def home():
     return render_template("home.html", study_locations=study_locations_list, data=data, column_names=column_names)
 
 
+@app.route("/den_haag")
+def den_haag_filter():
+    try:
+        conn = sqlite3.connect(db_location)
+    except:
+        print('could not establish connection to db')
+        exit(1)
+    c = conn.cursor()
+    c.execute("select * from study_locations ORDER BY totale_score DESC;")
+    column_names = [description[0] for description in c.description]
+    # format column names automatically
+    for i, name in enumerate(column_names):
+        new_name = name.split('_')
+        new_name[0] = new_name[0].capitalize()
+        column_names[i] = " ".join(new_name)
+    # c.execute("SELECT * FROM study_locations WHERE test_column_3 = 'test_data_3'")
+    conn.row_factory = dict_factory
+    c.execute(f"SELECT * FROM study_locations WHERE stad='Den Haag' ORDER BY totale_score DESC")
+    data = c.fetchall()
+    c.execute("SELECT werkplek FROM study_locations WHERE stad='Den Haag' ORDER BY totale_score DESC;")
+    # study_locations_tuples is a list of tuples, so for the location we only need the first element of each tuple
+    study_locations_tuples = c.fetchall()
+    study_locations_list = [study_locations_tuple[0] for study_locations_tuple in study_locations_tuples]
+    # old query in which a single location is fetched
+    # c.execute("SELECT total_score, price_consumptions_norm, access_hours_norm, google_review FROM study_locations "
+    #           "where city = 'Delft'")
+    # data = c.fetchall()
+    return render_template("home.html", study_locations=study_locations_list, data=data, column_names=column_names)
+
+
+@app.route("/delft")
+def delft_filter():
+    try:
+        conn = sqlite3.connect(db_location)
+    except:
+        print('could not establish connection to db')
+        exit(1)
+    c = conn.cursor()
+    c.execute("select * from study_locations ORDER BY totale_score DESC;")
+    column_names = [description[0] for description in c.description]
+    # format column names automatically
+    for i, name in enumerate(column_names):
+        new_name = name.split('_')
+        new_name[0] = new_name[0].capitalize()
+        column_names[i] = " ".join(new_name)
+    # c.execute("SELECT * FROM study_locations WHERE test_column_3 = 'test_data_3'")
+    conn.row_factory = dict_factory
+    c.execute(f"SELECT * FROM study_locations WHERE stad='Delft' ORDER BY totale_score DESC")
+    data = c.fetchall()
+    c.execute("SELECT werkplek FROM study_locations WHERE stad='Delft' ORDER BY totale_score DESC;")
+    # study_locations_tuples is a list of tuples, so for the location we only need the first element of each tuple
+    study_locations_tuples = c.fetchall()
+    study_locations_list = [study_locations_tuple[0] for study_locations_tuple in study_locations_tuples]
+    # old query in which a single location is fetched
+    # c.execute("SELECT total_score, price_consumptions_norm, access_hours_norm, google_review FROM study_locations "
+    #           "where city = 'Delft'")
+    # data = c.fetchall()
+    return render_template("home.html", study_locations=study_locations_list, data=data, column_names=column_names)
+
+
+@app.route("/rotterdam")
+def rotterdam_filter():
+    try:
+        conn = sqlite3.connect(db_location)
+    except:
+        print('could not establish connection to db')
+        exit(1)
+    c = conn.cursor()
+    c.execute("select * from study_locations ORDER BY totale_score DESC;")
+    column_names = [description[0] for description in c.description]
+    # format column names automatically
+    for i, name in enumerate(column_names):
+        new_name = name.split('_')
+        new_name[0] = new_name[0].capitalize()
+        column_names[i] = " ".join(new_name)
+    # c.execute("SELECT * FROM study_locations WHERE test_column_3 = 'test_data_3'")
+    conn.row_factory = dict_factory
+    c.execute(f"SELECT * FROM study_locations WHERE stad='Rotterdam' ORDER BY totale_score DESC")
+    data = c.fetchall()
+    c.execute("SELECT werkplek FROM study_locations WHERE stad='Rotterdam' ORDER BY totale_score DESC;")
+    # study_locations_tuples is a list of tuples, so for the location we only need the first element of each tuple
+    study_locations_tuples = c.fetchall()
+    study_locations_list = [study_locations_tuple[0] for study_locations_tuple in study_locations_tuples]
+    # old query in which a single location is fetched
+    # c.execute("SELECT total_score, price_consumptions_norm, access_hours_norm, google_review FROM study_locations "
+    #           "where city = 'Delft'")
+    # data = c.fetchall()
+    return render_template("home.html", study_locations=study_locations_list, data=data, column_names=column_names)
+
+
 @app.route("/about")
 def about():
     return render_template("about.html")

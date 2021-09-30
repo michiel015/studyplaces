@@ -45,6 +45,23 @@
             </div>
         </div>
         <div class="content-wrapper">
+            <div class="filter-options">
+                <ul>
+                    <li>
+                        <a href="{{ url_for('home') }}">Alle locaties</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('den_haag_filter') }}">Den Haag</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('delft_filter') }}">Delft</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('rotterdam_filter') }}">Rotterdam</a>
+                    </li>
+                </ul>
+            </div>
+
             <div class="cards-items-wrapper">
                         {% block contents %}{% endblock %}
                 </div>
