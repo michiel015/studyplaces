@@ -18,6 +18,14 @@ def convert_csv_to_sqlite_db(csv_filename):
     location_csv.to_sql('study_locations', conn, if_exists='replace', index=False)
 
 
+def convert_google_sheets_to_sqlite_db(sheet_id, sheet_name):
+    db_filename = 'test.db'
+    conn = sqlite3.connect(db_filename)
+    url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
+    location_csv = pd.read_csv(url)
+    location_csv.to_sql('study_locations', conn, if_exists='replace', index=False)
+
+
 def dict_factory(cursor, row):
     d = {}
     for idx, col in enumerate(cursor.description):
@@ -26,7 +34,14 @@ def dict_factory(cursor, row):
 
 
 if __name__ == "__main__":
-    convert_csv_to_sqlite_db('test.csv')
+    # import pandas as pd
+    # sheet_id = "1-lKEebAWQsylrN5uzjKaG3GlLfsFCnb-Tle1Wq23dqo"
+    # sheet_name = "data_frontend"
+    # url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
+    # df = pd.read_csv(url)
+    # print(df)
+    convert_google_sheets_to_sqlite_db("", "data_frontend")
+    # convert_csv_to_sqlite_db('test.csv')
     # con = sqlite3.connect("test.db")
     # con.row_factory = dict_factory
     # cur = con.cursor()
