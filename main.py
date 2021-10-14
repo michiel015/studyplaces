@@ -42,7 +42,9 @@ def home():
     # c.execute("SELECT total_score, price_consumptions_norm, access_hours_norm, google_review FROM study_locations "
     #           "where city = 'Delft'")
     # data = c.fetchall()
-    return render_template("home.html", study_locations=study_locations_list, data=data, column_names=column_names)
+    explanation_title = "Werkplekwijzer - Vind de beste werkplek bij jou in de buurt"
+    explanation_body = "Een goede werkplek vinden buiten kantoor kan een uitdaging zijn. Werkplekwijzer beoordeelt werkplekken in Nederland op verschillende criteria zodat jij de beste werkplek kunt vinden. Wij maken scoreboards en delen ervaringen over werkplekken in jouw omgeving. Hiermee kan je op werkplekwijzer de beste keuze maken voor een werkplek buiten kantoor."
+    return render_template("home.html", study_locations=study_locations_list, data=data, column_names=column_names, explanation_title=explanation_title, explanation_body=explanation_body)
 
 
 @app.route("/den_haag")
@@ -72,7 +74,9 @@ def den_haag_filter():
     # c.execute("SELECT total_score, price_consumptions_norm, access_hours_norm, google_review FROM study_locations "
     #           "where city = 'Delft'")
     # data = c.fetchall()
-    return render_template("home.html", study_locations=study_locations_list, data=data, column_names=column_names)
+    explanation_title = "Den Haag"
+    explanation_body = "Den Haag"
+    return render_template("home.html", study_locations=study_locations_list, data=data, column_names=column_names, explanation_title=explanation_title, explanation_body=explanation_body)
 
 
 @app.route("/delft")
@@ -102,7 +106,9 @@ def delft_filter():
     # c.execute("SELECT total_score, price_consumptions_norm, access_hours_norm, google_review FROM study_locations "
     #           "where city = 'Delft'")
     # data = c.fetchall()
-    return render_template("home.html", study_locations=study_locations_list, data=data, column_names=column_names)
+    explanation_title = "Delft"
+    explanation_body = "Delft"
+    return render_template("home.html", study_locations=study_locations_list, data=data, column_names=column_names, explanation_title=explanation_title, explanation_body=explanation_body)
 
 
 @app.route("/rotterdam")
@@ -132,7 +138,9 @@ def rotterdam_filter():
     # c.execute("SELECT total_score, price_consumptions_norm, access_hours_norm, google_review FROM study_locations "
     #           "where city = 'Delft'")
     # data = c.fetchall()
-    return render_template("home.html", study_locations=study_locations_list, data=data, column_names=column_names)
+    explanation_title = "Rotterdam"
+    explanation_body = "Rotterdam"
+    return render_template("home.html", study_locations=study_locations_list, data=data, column_names=column_names, explanation_title=explanation_title, explanation_body=explanation_body)
 
 
 @app.route("/about")
