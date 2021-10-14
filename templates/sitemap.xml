@@ -8,128 +8,198 @@
 
 
 <url>
-  <loc>https://werkplekwijzer.nl/</loc>
-  <lastmod>2021-06-10T20:44:07+00:00</lastmod>
+  <loc>https://www.werkplekwijzer.nl/</loc>
+  <lastmod>2021-10-14T21:00:40+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://werkplekwijzer.nl/about</loc>
-  <lastmod>2021-06-10T20:44:07+00:00</lastmod>
+  <loc>https://www.werkplekwijzer.nl/plek_toevoegen</loc>
+  <lastmod>2021-10-14T21:00:40+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://werkplekwijzer.nl/huiskamer_cafe_den_haag_centraal</loc>
-  <lastmod>2021-06-10T20:44:07+00:00</lastmod>
+  <loc>https://www.werkplekwijzer.nl/about</loc>
+  <lastmod>2021-10-14T21:00:40+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://werkplekwijzer.nl/huiskamer_cafe_rotterdam_centraal</loc>
-  <lastmod>2021-06-10T20:44:07+00:00</lastmod>
+  <loc>https://www.werkplekwijzer.nl/den_haag</loc>
+  <lastmod>2021-10-14T21:00:40+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://werkplekwijzer.nl/bibliotheek_tu_delft</loc>
-  <lastmod>2021-06-10T20:44:07+00:00</lastmod>
+  <loc>https://www.werkplekwijzer.nl/delft</loc>
+  <lastmod>2021-10-14T21:00:40+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://werkplekwijzer.nl/the_tea_lab_rotterdam</loc>
-  <lastmod>2021-06-10T20:44:07+00:00</lastmod>
+  <loc>https://www.werkplekwijzer.nl/rotterdam</loc>
+  <lastmod>2021-10-14T21:00:40+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://werkplekwijzer.nl/centrale_bibliotheek_den_haag</loc>
-  <lastmod>2021-06-10T20:44:07+00:00</lastmod>
+  <loc>https://www.werkplekwijzer.nl/lebkov_and_sons_rotterdam</loc>
+  <lastmod>2021-10-14T21:00:40+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://werkplekwijzer.nl/lebkov_and_sons_rotterdam</loc>
-  <lastmod>2021-06-10T20:44:07+00:00</lastmod>
+  <loc>https://www.werkplekwijzer.nl/douwe_egberts_cafe_rotterdam_centraal</loc>
+  <lastmod>2021-10-14T21:00:40+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://werkplekwijzer.nl/douwe_egberts_cafe_rotterdam_centraal</loc>
-  <lastmod>2021-06-10T20:44:07+00:00</lastmod>
+  <loc>https://www.werkplekwijzer.nl/dudok_rotterdam</loc>
+  <lastmod>2021-10-14T21:00:40+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://werkplekwijzer.nl/universiteit_leiden_campus_den_haag</loc>
-  <lastmod>2021-06-10T20:44:07+00:00</lastmod>
+  <loc>https://www.werkplekwijzer.nl/huiskamer_cafe_den_haag_centraal</loc>
+  <lastmod>2021-10-14T21:00:40+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://werkplekwijzer.nl/coffee_company_rotterdam</loc>
-  <lastmod>2021-06-10T20:44:07+00:00</lastmod>
+  <loc>https://www.werkplekwijzer.nl/starbucks_den_haag_centraal</loc>
+  <lastmod>2021-10-14T21:00:40+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://werkplekwijzer.nl/dudok_rotterdam</loc>
-  <lastmod>2021-06-10T20:44:07+00:00</lastmod>
+  <loc>https://www.werkplekwijzer.nl/coffee_company_rotterdam</loc>
+  <lastmod>2021-10-14T21:00:40+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://werkplekwijzer.nl/starbucks_den_haag_centraal</loc>
-  <lastmod>2021-06-10T20:44:07+00:00</lastmod>
+  <loc>https://www.werkplekwijzer.nl/centrale_bibliotheek_den_haag</loc>
+  <lastmod>2021-10-14T21:00:40+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://werkplekwijzer.nl/bagels_and_beans_rotterdam</loc>
-  <lastmod>2021-06-10T20:44:07+00:00</lastmod>
+  <loc>https://www.werkplekwijzer.nl/the_tea_lab_rotterdam</loc>
+  <lastmod>2021-10-14T21:00:40+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://werkplekwijzer.nl/hofhouse_den_haag</loc>
-  <lastmod>2021-06-10T20:44:07+00:00</lastmod>
+  <loc>https://www.werkplekwijzer.nl/crunch_cafe_den_haag</loc>
+  <lastmod>2021-10-14T21:00:40+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://werkplekwijzer.nl/lebkov_and_sons_den_haag</loc>
-  <lastmod>2021-06-10T20:44:07+00:00</lastmod>
+  <loc>https://www.werkplekwijzer.nl/centrale_bibliotheek_rotterdam</loc>
+  <lastmod>2021-10-14T21:00:40+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://werkplekwijzer.nl/centrale_bibliotheek_rotterdam</loc>
-  <lastmod>2021-06-10T20:44:07+00:00</lastmod>
+  <loc>https://www.werkplekwijzer.nl/hofhouse_den_haag</loc>
+  <lastmod>2021-10-14T21:00:40+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://werkplekwijzer.nl/bagels_and_beans_den_haag_spui</loc>
-  <lastmod>2021-06-10T20:44:07+00:00</lastmod>
+  <loc>https://www.werkplekwijzer.nl/weena_cafe_rotterdam</loc>
+  <lastmod>2021-10-14T21:00:40+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://werkplekwijzer.nl/coffee_fellows_den_haag</loc>
-  <lastmod>2021-06-10T20:44:07+00:00</lastmod>
+  <loc>https://www.werkplekwijzer.nl/bibliotheek_tu_delft</loc>
+  <lastmod>2021-10-14T21:00:40+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://werkplekwijzer.nl/august_cafe_den_haag</loc>
-  <lastmod>2021-06-10T20:44:07+00:00</lastmod>
+  <loc>https://www.werkplekwijzer.nl/cafe_booon_rotterdam</loc>
+  <lastmod>2021-10-14T21:00:40+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://werkplekwijzer.nl/urban_cafe_den_haag</loc>
-  <lastmod>2021-06-10T20:44:07+00:00</lastmod>
+  <loc>https://www.werkplekwijzer.nl/bagels_and_beans_rotterdam</loc>
+  <lastmod>2021-10-14T21:00:40+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://werkplekwijzer.nl/chco_den_haag</loc>
-  <lastmod>2021-06-10T20:44:07+00:00</lastmod>
+  <loc>https://www.werkplekwijzer.nl/bagels_and_beans_den_haag_spui</loc>
+  <lastmod>2021-10-14T21:00:40+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://werkplekwijzer.nl/house_of_tribes_den_haag</loc>
-  <lastmod>2021-06-10T20:44:07+00:00</lastmod>
+  <loc>https://www.werkplekwijzer.nl/chco_den_haag</loc>
+  <lastmod>2021-10-14T21:00:40+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://werkplekwijzer.nl/cafe_at_home_rotterdam</loc>
-  <lastmod>2021-06-10T20:44:07+00:00</lastmod>
+  <loc>https://www.werkplekwijzer.nl/lebkov_and_sons_den_haag</loc>
+  <lastmod>2021-10-14T21:00:40+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://werkplekwijzer.nl/capriole_cafe_den_haag</loc>
-  <lastmod>2021-06-10T20:44:07+00:00</lastmod>
+  <loc>https://www.werkplekwijzer.nl/cafe_pim_den_haag</loc>
+  <lastmod>2021-10-14T21:00:40+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.werkplekwijzer.nl/joy_espresso_rotterdam</loc>
+  <lastmod>2021-10-14T21:00:40+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.werkplekwijzer.nl/le_nord_rotterdam</loc>
+  <lastmod>2021-10-14T21:00:40+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.werkplekwijzer.nl/huiskamer_cafe_rotterdam_centraal</loc>
+  <lastmod>2021-10-14T21:00:40+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.werkplekwijzer.nl/cafe_at_home_rotterdam</loc>
+  <lastmod>2021-10-14T21:00:40+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.werkplekwijzer.nl/pistache_cafe_den_haag</loc>
+  <lastmod>2021-10-14T21:00:40+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.werkplekwijzer.nl/capriole_cafe_den_haag</loc>
+  <lastmod>2021-10-14T21:00:40+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.werkplekwijzer.nl/august_cafe_den_haag</loc>
+  <lastmod>2021-10-14T21:00:40+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.werkplekwijzer.nl/urban_cafe_den_haag</loc>
+  <lastmod>2021-10-14T21:00:40+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.werkplekwijzer.nl/bleyenberg_den_haag</loc>
+  <lastmod>2021-10-14T21:00:40+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.werkplekwijzer.nl/universiteit_leiden_campus_den_haag</loc>
+  <lastmod>2021-10-14T21:00:40+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.werkplekwijzer.nl/coffee_fellows_den_haag</loc>
+  <lastmod>2021-10-14T21:00:40+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.werkplekwijzer.nl/daily_rotterdam</loc>
+  <lastmod>2021-10-14T21:00:40+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.werkplekwijzer.nl/house_of_tribes_den_haag</loc>
+  <lastmod>2021-10-14T21:00:40+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.werkplekwijzer.nl/hometown_coffee_den_haag</loc>
+  <lastmod>2021-10-14T21:00:40+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 
