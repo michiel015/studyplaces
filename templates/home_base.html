@@ -33,10 +33,16 @@
                     <a href="{{ url_for('home') }}">Home</a>
                 </div>
                 <div class="navbar-link">
+                    <a href="{{ url_for('den_haag_filter') }}">Den Haag</a>
+                </div>
+                <div class="navbar-link">
+                    <a href="{{ url_for('rotterdam_filter') }}">Rotterdam</a>
+                </div>
+                <div class="navbar-link">
                     <a href="{{ url_for('plek_toevoegen') }}">Plek toevoegen</a>
                 </div>
                 <div class="navbar-link">
-                    <a href="{{ url_for('about') }}">About</a>
+                    <a href="{{ url_for('about') }}">Over Werkplekwijzer</a>
                 </div>
             </div>
             <div class="top-right">
@@ -55,23 +61,6 @@
                         <a href="{{ url_for('rotterdam_filter') }}">Rotterdam</a>
                       </div>
             </div>
-<!--            <div class="filter-options">-->
-<!--                <ul>-->
-<!--                    <li>-->
-<!--                        <a href="{{ url_for('home') }}">Alle locaties</a>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <a href="{{ url_for('den_haag_filter') }}">Den Haag</a>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <a href="{{ url_for('delft_filter') }}">Delft</a>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <a href="{{ url_for('rotterdam_filter') }}">Rotterdam</a>-->
-<!--                    </li>-->
-<!--                </ul>-->
-<!--            </div>-->
-
             <div class="cards-items-wrapper">
                         {% block contents %}{% endblock %}
 <!--                cards-items-wrapper is closed in home.html -->
