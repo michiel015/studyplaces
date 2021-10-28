@@ -85,8 +85,8 @@ def den_haag_filter():
     explanation_title = "Beste werkplekken in Den Haag"
     explanation_body = "Werkplekwijzer zet de beste werkplekken in Den Haag voor je op een rijtje. De werkplekken zijn beoordeeld op verschillende criteria zodat jij gemakkelijk de beste werkplek kunt vinden. Den Haag is de hoofdstad van de provincie Zuid-Holland en is erg goed bereikbaar. De Nederlandse regering en het parlement bevinden zich in Den Haag. De stad is toeristisch en heeft twee bekende stranden: Scheveningen en Kijkduin. Daarnaast zijn er meerdere multinationals gevestigd in Den Haag zoals: Ahold, AEGON, ING Bank en KPN. Aan cafés met goede koffie is in Den Haag geen gebrek. Wij hebben voor jou de beste werkplekken in Den Haag uitgezocht."
 
-    title = "Werkplekwijzer - Den haag"
-    meta_description = "Den haag"
+    title = "Werkplekwijzer - Beste werkplekken in Den Haag"
+    meta_description = "Werkplekwijzer zet de beste werkplekken in Den Haag voor je op een rijtje. De werkplekken zijn beoordeeld op verschillende criteria zodat jij de beste werkplek kunt vinden."
     meta_keywords = "werkplek, werkplekwijzer, flexwerken, werkplekken, rotterdam, amsterdam, den haag, delft"
     meta_viewport = "width=960px"
     return render_template("home.html", title=title, meta_description=meta_description, meta_keywords=meta_keywords,
@@ -121,11 +121,11 @@ def delft_filter():
     # c.execute("SELECT total_score, price_consumptions_norm, access_hours_norm, google_review FROM study_locations "
     #           "where city = 'Delft'")
     # data = c.fetchall()
-    explanation_title = "Delft"
+    explanation_title = "Vind de beste werkplekken in Delft"
     explanation_body = "Delft"
 
-    title = "Werkplekwijzer - Delft"
-    meta_description = "Delft"
+    title = "Werkplekwijzer - Beste werkplekken in Delft"
+    meta_description = "Op Werkplekwijzer vind je de beste werkplekken in Delft. Wij beoordelen alle werkplekken op de meest belangrijke criteria."
     meta_keywords = "werkplek, werkplekwijzer, flexwerken, werkplekken, rotterdam, amsterdam, den haag, delft"
     meta_viewport = "width=960px"
     return render_template("home.html", title=title, meta_description=meta_description, meta_keywords=meta_keywords,
@@ -163,8 +163,8 @@ def rotterdam_filter():
     explanation_title = "Beste werkplekken in Rotterdam"
     explanation_body = "Werkplekwijzer heeft de beste werkplekken voor jou uitgezocht. We hebben de werkplekken in Rotterdam beoordeeld op belangrijke criteria zodat je eenvoudig de beste werkplekken kunt vinden. De stad Rotterdam heeft na Amsterdam het meeste aantal inwoners van Nederland. Rotterdam is bekend als havenstad en heeft de grootste haven van Europa. De Rotterdamse haven is een belangrijk logistiek en economisch centrum. Rotterdam is goed bereikbaar en heeft verschillende metrostations. Er zijn een hoop grote bedrijven te vinden zoals: Unilever, Nationale Nederlanden en Robeco. Ook aan werkplekken in Rotterdam zeker geen gebrek. Er zijn veel restaurants en cafés met lekkere koffie waar je wat kunt werken of studeren."
 
-    title = "Werkplekwijzer - Rotterdam"
-    meta_description = "Rotterdam"
+    title = "Werkplekwijzer - Beste werkplekken in Rotterdam"
+    meta_description = "Werkplekwijzer heeft de beste werkplekken voor jou uitgezocht. We hebben de werkplekken in Rotterdam beoordeeld op belangrijke criteria zodat je eenvoudig de beste werkplekken kunt vinden."
     meta_keywords = "werkplek, werkplekwijzer, flexwerken, werkplekken, rotterdam, amsterdam, den haag, delft"
     meta_viewport = "width=960px"
     return render_template("home.html", title=title, meta_description=meta_description, meta_keywords=meta_keywords,

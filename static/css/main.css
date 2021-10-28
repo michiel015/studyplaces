@@ -496,17 +496,18 @@ h4 {
 
 /* Styling for dropdown menu and search */
 .dropbtn {
-  background-color: #04AA6D;
+  background-color: #B08968;
   color: white;
   padding: 16px;
   font-size: 16px;
   border: none;
   cursor: pointer;
+  margin-left: 7px;
 }
 
 /* Dropdown button on hover & focus */
 .dropbtn:hover, .dropbtn:focus {
-  background-color: #3e8e41;
+  background-color: #B08968;
 }
 
 /* The search field */
@@ -538,6 +539,7 @@ h4 {
   min-width: 230px;
   border: 1px solid #ddd;
   z-index: 1;
+  margin-left: 7px;
 }
 
 /* Links inside the dropdown */
