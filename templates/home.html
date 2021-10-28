@@ -1,5 +1,12 @@
 {% extends 'home_base.html' %}
 
+{% block metadata %}
+    <title>"{{ title }}"</title>
+    <meta name="description" content="{{ meta_description }}">
+    <meta name="keywords" content="{{ meta_keywords }}">
+    <meta name="viewport" content="{{ meta_viewport }}">
+{% endblock %}
+
 {% block contents %}
 {% for location in study_locations %}
 <div class="cards-item-wrapper">

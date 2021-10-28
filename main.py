@@ -44,7 +44,15 @@ def home():
     # data = c.fetchall()
     explanation_title = "Werkplekwijzer - Vind de beste werkplek bij jou in de buurt"
     explanation_body = "Een goede werkplek vinden buiten kantoor kan een uitdaging zijn. Werkplekwijzer beoordeelt werkplekken in Nederland op verschillende criteria zodat jij de beste werkplek kunt vinden. Wij maken scoreboards en delen ervaringen over werkplekken in jouw omgeving. Hiermee kan je op werkplekwijzer de beste keuze maken voor een werkplek buiten kantoor. Of je nu op zoek bent naar een café met de lekkerste koffie, of een werkplek met het snelste internet. Alle beoordelingen per werkplek zijn eenvoudig te vinden. Alle werkplekken zijn gratis en lopen uiteen van cafés tot bibliotheken. Ideaal als je een keer buiten kantoor wilt werken of een keer ergens anders wilt studeren dan thuis."
-    return render_template("home.html", study_locations=study_locations_list, data=data, column_names=column_names, explanation_title=explanation_title, explanation_body=explanation_body)
+
+    title = "Werkplekwijzer - Vind de beste werkplek bij jou in de buurt"
+    meta_description = "Een goede werkplek vinden buiten kantoor kan een uitdaging zijn. Werkplekwijzer beoordeelt werkplekken in Nederland op verschillende criteria zodat jij de beste werkplek kunt vinden."
+    meta_keywords = "werkplek, werkplekwijzer, flexwerken, werkplekken, rotterdam, amsterdam, den haag, delft"
+    meta_viewport = "width=960px"
+    return render_template("home.html", title=title, meta_description=meta_description, meta_keywords=meta_keywords,
+                           meta_viewport=meta_viewport, study_locations=study_locations_list, data=data,
+                           column_names=column_names, explanation_title=explanation_title,
+                           explanation_body=explanation_body)
 
 
 @app.route("/den_haag")
@@ -76,8 +84,15 @@ def den_haag_filter():
     # data = c.fetchall()
     explanation_title = "Beste werkplekken in Den Haag"
     explanation_body = "Werkplekwijzer zet de beste werkplekken in Den Haag voor je op een rijtje. De werkplekken zijn beoordeeld op verschillende criteria zodat jij gemakkelijk de beste werkplek kunt vinden. Den Haag is de hoofdstad van de provincie Zuid-Holland en is erg goed bereikbaar. De Nederlandse regering en het parlement bevinden zich in Den Haag. De stad is toeristisch en heeft twee bekende stranden: Scheveningen en Kijkduin. Daarnaast zijn er meerdere multinationals gevestigd in Den Haag zoals: Ahold, AEGON, ING Bank en KPN. Aan cafés met goede koffie is in Den Haag geen gebrek. Wij hebben voor jou de beste werkplekken in Den Haag uitgezocht."
-    return render_template("home.html", study_locations=study_locations_list, data=data, column_names=column_names, explanation_title=explanation_title, explanation_body=explanation_body)
 
+    title = "Werkplekwijzer - Den haag"
+    meta_description = "Den haag"
+    meta_keywords = "werkplek, werkplekwijzer, flexwerken, werkplekken, rotterdam, amsterdam, den haag, delft"
+    meta_viewport = "width=960px"
+    return render_template("home.html", title=title, meta_description=meta_description, meta_keywords=meta_keywords,
+                           meta_viewport=meta_viewport, study_locations=study_locations_list, data=data,
+                           column_names=column_names, explanation_title=explanation_title,
+                           explanation_body=explanation_body)
 
 @app.route("/delft")
 def delft_filter():
@@ -108,8 +123,15 @@ def delft_filter():
     # data = c.fetchall()
     explanation_title = "Delft"
     explanation_body = "Delft"
-    return render_template("home.html", study_locations=study_locations_list, data=data, column_names=column_names, explanation_title=explanation_title, explanation_body=explanation_body)
 
+    title = "Werkplekwijzer - Delft"
+    meta_description = "Delft"
+    meta_keywords = "werkplek, werkplekwijzer, flexwerken, werkplekken, rotterdam, amsterdam, den haag, delft"
+    meta_viewport = "width=960px"
+    return render_template("home.html", title=title, meta_description=meta_description, meta_keywords=meta_keywords,
+                           meta_viewport=meta_viewport, study_locations=study_locations_list, data=data,
+                           column_names=column_names, explanation_title=explanation_title,
+                           explanation_body=explanation_body)
 
 @app.route("/rotterdam")
 def rotterdam_filter():
@@ -140,7 +162,15 @@ def rotterdam_filter():
     # data = c.fetchall()
     explanation_title = "Beste werkplekken in Rotterdam"
     explanation_body = "Werkplekwijzer heeft de beste werkplekken voor jou uitgezocht. We hebben de werkplekken in Rotterdam beoordeeld op belangrijke criteria zodat je eenvoudig de beste werkplekken kunt vinden. De stad Rotterdam heeft na Amsterdam het meeste aantal inwoners van Nederland. Rotterdam is bekend als havenstad en heeft de grootste haven van Europa. De Rotterdamse haven is een belangrijk logistiek en economisch centrum. Rotterdam is goed bereikbaar en heeft verschillende metrostations. Er zijn een hoop grote bedrijven te vinden zoals: Unilever, Nationale Nederlanden en Robeco. Ook aan werkplekken in Rotterdam zeker geen gebrek. Er zijn veel restaurants en cafés met lekkere koffie waar je wat kunt werken of studeren."
-    return render_template("home.html", study_locations=study_locations_list, data=data, column_names=column_names, explanation_title=explanation_title, explanation_body=explanation_body)
+
+    title = "Werkplekwijzer - Rotterdam"
+    meta_description = "Rotterdam"
+    meta_keywords = "werkplek, werkplekwijzer, flexwerken, werkplekken, rotterdam, amsterdam, den haag, delft"
+    meta_viewport = "width=960px"
+    return render_template("home.html", title=title, meta_description=meta_description, meta_keywords=meta_keywords,
+                           meta_viewport=meta_viewport, study_locations=study_locations_list, data=data,
+                           column_names=column_names, explanation_title=explanation_title,
+                           explanation_body=explanation_body)
 
 
 @app.route("/about")
