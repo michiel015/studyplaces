@@ -94,6 +94,7 @@ def den_haag_filter():
                            column_names=column_names, explanation_title=explanation_title,
                            explanation_body=explanation_body)
 
+
 @app.route("/delft")
 def delft_filter():
     try:
@@ -133,6 +134,7 @@ def delft_filter():
                            column_names=column_names, explanation_title=explanation_title,
                            explanation_body=explanation_body)
 
+
 @app.route("/rotterdam")
 def rotterdam_filter():
     try:
@@ -165,6 +167,46 @@ def rotterdam_filter():
 
     title = "Werkplekwijzer - Vind eenvoudig de beste werkplekken in Rotterdam"
     meta_description = "Werkplekwijzer heeft de beste werkplekken in Rotterdam uitgezocht en beoordeeld op belangrijke criteria zodat jij eenvoudig de beste werkplek kunt vinden."
+    meta_keywords = "werkplek, werkplekwijzer, flexwerken, werkplekken, rotterdam, amsterdam, den haag, delft"
+    meta_viewport = "width=960px"
+    return render_template("home.html", title=title, meta_description=meta_description, meta_keywords=meta_keywords,
+                           meta_viewport=meta_viewport, study_locations=study_locations_list, data=data,
+                           column_names=column_names, explanation_title=explanation_title,
+                           explanation_body=explanation_body)
+
+
+@app.route("/amsterdam")
+def amsterdam_filter():
+    try:
+        conn = sqlite3.connect(db_location)
+    except:
+        print('could not establish connection to db')
+        exit(1)
+    c = conn.cursor()
+    c.execute("select * from study_locations ORDER BY totale_score DESC;")
+    column_names = [description[0] for description in c.description]
+    # format column names automatically
+    for i, name in enumerate(column_names):
+        new_name = name.split('_')
+        new_name[0] = new_name[0].capitalize()
+        column_names[i] = " ".join(new_name)
+    # c.execute("SELECT * FROM study_locations WHERE test_column_3 = 'test_data_3'")
+    conn.row_factory = dict_factory
+    c.execute(f"SELECT * FROM study_locations WHERE stad='Amsterdam' ORDER BY totale_score DESC")
+    data = c.fetchall()
+    c.execute("SELECT werkplek FROM study_locations WHERE stad='Amsterdam' ORDER BY totale_score DESC;")
+    # study_locations_tuples is a list of tuples, so for the location we only need the first element of each tuple
+    study_locations_tuples = c.fetchall()
+    study_locations_list = [study_locations_tuple[0] for study_locations_tuple in study_locations_tuples]
+    # old query in which a single location is fetched
+    # c.execute("SELECT total_score, price_consumptions_norm, access_hours_norm, google_review FROM study_locations "
+    #           "where city = 'Delft'")
+    # data = c.fetchall()
+    explanation_title = "Beste werkplekken in Amsterdam"
+    explanation_body = "Werkplekwijzer heeft de beste werkplekken voor jou uitgezocht. We hebben de werkplekken in Amsterdam beoordeeld op belangrijke criteria zodat je eenvoudig de beste werkplekken kunt vinden. De stad Rotterdam heeft na Amsterdam het meeste aantal inwoners van Nederland. Rotterdam is bekend als havenstad en heeft de grootste haven van Europa. De Rotterdamse haven is een belangrijk logistiek en economisch centrum. Rotterdam is goed bereikbaar en heeft verschillende metrostations. Er zijn een hoop grote bedrijven te vinden zoals: Unilever, Nationale Nederlanden en Robeco. Ook aan werkplekken in Rotterdam zeker geen gebrek. Er zijn veel restaurants en cafés met lekkere koffie waar je wat kunt werken of studeren."
+
+    title = "Werkplekwijzer - Beste werkplekken in Amsterdam"
+    meta_description = "Werkplekwijzer heeft de beste werkplekken voor jou uitgezocht. We hebben de werkplekken in Amsterdam beoordeeld op belangrijke criteria zodat je eenvoudig de beste werkplekken kunt vinden."
     meta_keywords = "werkplek, werkplekwijzer, flexwerken, werkplekken, rotterdam, amsterdam, den haag, delft"
     meta_viewport = "width=960px"
     return render_template("home.html", title=title, meta_description=meta_description, meta_keywords=meta_keywords,
