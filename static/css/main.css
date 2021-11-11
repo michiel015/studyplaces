@@ -555,3 +555,24 @@ h4 {
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
+footer [class ^= 'footer-'] {
+    width: 33.3333%;
+    display: inline-block;
+    text-align: center;
+}
+
+footer .footer-left {
+    float: left;
+}
+
+footer .footer-right {
+    float: right;
+}
+footer {
+border-top: 1px solid #c7c4c4;
+height: 100px;
+}
+footer a {
+      text-align: left;
+
+}
