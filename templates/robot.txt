@@ -4,4 +4,4 @@ Disallow: /nogooglebot/
 User-agent: *
 Allow: /
 
-Sitemap: https://werkplekwijzer.nl/sitemap
+Sitemap: https://werkplekwijzer.nl/sitemap.xml
