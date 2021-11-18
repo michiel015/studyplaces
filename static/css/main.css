@@ -88,7 +88,7 @@ padding: 0;
 
 .navbar-link {
     height: 22px;
-    border-bottom: 1px solid transparent;
+    border-bottom: 2px;
     transition: border-bottom 0.5s;
     margin-top: 0.6%;
 }
@@ -101,7 +101,8 @@ padding: 0;
 
 /*if user hovers over this class*/
 .navbar-link:hover {
-    border-bottom: 1px solid black;
+    border-bottom: 2px;
+    border-color: #b08968;
 }
 
 .navbar-link a:hover {
@@ -109,7 +110,9 @@ padding: 0;
 }
 /*make border and link solid black if that link is active*/
 .active-nav-link {
-    border-bottom: 1px solid black;
+    border-bottom: 2px;
+    border-color: #b08968;
+
 }
 
 .active-nav-link a{
@@ -558,7 +561,10 @@ h4 {
 footer [class ^= 'footer-'] {
     width: 33.3333%;
     display: inline-block;
-    text-align: center;
+    text-align: left;
+    background-color: #b08968;
+    height: 220px;
+    padding-left: 8%;
 }
 
 footer .footer-left {
@@ -572,7 +578,9 @@ footer {
 border-top: 1px solid #c7c4c4;
 height: 100px;
 }
-footer a {
-      text-align: left;
-
+h3 {
+  margin-bottom: 0px;
+}
+#mc_embed_signup form {
+  padding: 0px!important;
 }
