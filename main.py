@@ -18,6 +18,8 @@ if hostname == 'werkplekwijzer':
     db_location = '/var/www/werkplekwijzer/werkplekwijzer/test.db'
 else:
     db_location = 'test.db'
+
+
 @app.route("/")
 def home():
     # establish database connection and make cursor
@@ -56,6 +58,8 @@ def home():
                            meta_viewport=meta_viewport, study_locations=study_locations_list, data=data,
                            column_names=column_names, explanation_title=explanation_title,
                            explanation_body=explanation_body)
+
+
 @app.route("/den_haag")
 def den_haag_filter():
     try:
@@ -93,6 +97,8 @@ def den_haag_filter():
                            meta_viewport=meta_viewport, study_locations=study_locations_list, data=data,
                            column_names=column_names, explanation_title=explanation_title,
                            explanation_body=explanation_body)
+
+
 @app.route("/delft")
 def delft_filter():
     try:
@@ -130,6 +136,8 @@ def delft_filter():
                            meta_viewport=meta_viewport, study_locations=study_locations_list, data=data,
                            column_names=column_names, explanation_title=explanation_title,
                            explanation_body=explanation_body)
+
+
 @app.route("/rotterdam")
 def rotterdam_filter():
     try:
@@ -167,6 +175,8 @@ def rotterdam_filter():
                            meta_viewport=meta_viewport, study_locations=study_locations_list, data=data,
                            column_names=column_names, explanation_title=explanation_title,
                            explanation_body=explanation_body)
+
+
 @app.route("/amsterdam")
 def amsterdam_filter():
     try:
@@ -204,9 +214,13 @@ def amsterdam_filter():
                            meta_viewport=meta_viewport, study_locations=study_locations_list, data=data,
                            column_names=column_names, explanation_title=explanation_title,
                            explanation_body=explanation_body)
+
+
 @app.route("/about")
 def about():
     return render_template("about.html")
+
+
 @app.route("/test1")
 def test1():
     return render_template("test1.html")
@@ -219,13 +233,15 @@ def test1():
 
 
 @app.route("/robot.txt")
-
-
 def robot():
     return render_template("robot.txt")
+
+
 @app.route("/plek_toevoegen")
 def plek_toevoegen():
     return render_template("plek_toevoegen.html")
+
+
 @app.route('/<variable>', methods=['GET'])
 def location_page(variable):
     # establish database connection and make cursor
