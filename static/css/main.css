@@ -12,6 +12,11 @@ body {
     background-color: var(--page-background);
 }
 
+/* Let links always stay blue, even after clicking */
+a:visited{
+  color:black;
+}
+
 /* change vertical spacing of list elements */
 li{
   margin: 10px 0;

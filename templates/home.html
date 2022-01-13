@@ -59,7 +59,7 @@
     <!--        <div class="cards-review-button">-->
 <!--        <button onclick="toggleCard()" id="cardButton">Show more</button>-->
 <!--        </div>-->
-
+    <a href="{{ url_for('location_page', variable=data[loop.index-1][25]) }}">
       <div class="modal" id="modal_{{loop.index}}">
         <div class="modal-header">
           <div class="modal-title">{{ location }}</div>
@@ -104,11 +104,13 @@
             </tr>
           </thead>
     </table>
-                <a href="{{ url_for('location_page', variable=data[loop.index-1][25]) }}">Lees meer over {{ location }}</a>
+                <div>Lees meer over {{ location }}</div>
+<!--                <a href="{{ url_for('location_page', variable=data[loop.index-1][25]) }}">Lees meer over {{ location }}</a>-->
 <!--                <a href="url_for('location_page', variable={{ data[loop.index-1][25] }})">Go to location page</a>-->
 </div>
         </div>
       </div>
+    </a>
     {% if loop.index % 6 == 0 %}<br><br><br>
     {% endif %}
 </div>
