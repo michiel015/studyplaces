@@ -23,7 +23,7 @@
     <div class="container">
         <div class="nav-wrapper">
             <div class="top-left">
-                <div class="logo">
+                                    <div class="logo">
                         <a href="{{ url_for('home') }}">
                         <img src="{{ url_for('static', filename='img/werkplekwijzermini.svg') }}" alt="website logo"/>
                     </a>
@@ -32,10 +32,20 @@
                     <a href="{{ url_for('home') }}">Home</a>
                 </div>
                 <div class="navbar-link">
+                    <a href="{{ url_for('den_haag_filter') }}">Den Haag</a>
+                </div>
+                <div class="navbar-link">
+                    <a href="{{ url_for('rotterdam_filter') }}">Rotterdam</a>
+                </div>
+                <div class="navbar-link">
                     <a href="{{ url_for('plek_toevoegen') }}">Plek toevoegen</a>
                 </div>
                 <div class="navbar-link active-nav-link">
-                    <a href="{{ url_for('about') }}">About</a>
+                    <a href="{{ url_for('about') }}">Over Werkplekwijzer</a>
+                </div>
+            </div>
+            <div class="top-right">
+                <div class="navbar-brand">
                 </div>
             </div>
         </div>

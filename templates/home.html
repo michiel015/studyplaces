@@ -70,28 +70,37 @@
             <table>
           <thead>
             <tr>
-                <th>{{column_names[2]}}</th>
-                <td><progress id="progress-bar"  value="{{ data[loop.index-1][14]}}" max="100"></progress></td>
-                <th>{{column_names[3]}}</th>
+                <th>&#11088; {{column_names[2]}}</th>
+                <td><div class="Stars" style="--rating: ({{ data[loop.index-1][14]}}/100)*5;" aria-label="Rating of this product is 2.3 out of 5."></div></td>
+<!--                <td><progress id="progress-bar"  value="{{ data[loop.index-1][14]}}" max="100"></progress></td>-->
+                <th>&#128182; {{column_names[3]}}</th>
                 <td><progress id="progress-bar"  value="{{ data[loop.index-1][15]}}" max="100"></progress></td></tr>
-                <tr><th>{{column_names[4]}}</th>
+                <tr><th>&#128338; {{column_names[4]}}</th>
                 <td><progress id="progress-bar"  value="{{ data[loop.index-1][16]}}" max="100"></progress></td>
-                <th>{{column_names[5]}}</th>
+                <th>&#128202; {{column_names[5]}}</th>
                 <td><progress id="progress-bar"  value="{{ data[loop.index-1][17]}}" max="100"></progress></td></tr>
-                <tr><th>{{column_names[6]}}</th>
+                <tr><th>&#128225; &nbsp;{{column_names[6]}}</th>
                 <td><progress id="progress-bar"  value="{{ data[loop.index-1][18]}}" max="100"></progress></td>
-                <th>{{column_names[8]}}</th>
+                <th>&#128694;   {{column_names[8]}}</th>
                 <td><progress id="progress-bar"  value="{{ data[loop.index-1][19]}}" max="100"></progress></td></tr>
-                <tr><th>{{column_names[9]}}</th>
+                <tr><th>&#128187;   {{column_names[9]}}</th>
                 <td><progress id="progress-bar"  value="{{ data[loop.index-1][20]}}" max="100"></progress></td>
-                <th>{{column_names[10]}}</th>
-                <td><progress id="progress-bar"  value="{{ data[loop.index-1][21]}}" max="100"></progress></td></tr>
-                <tr><th>{{column_names[11]}}</th>
-                <td><progress id="progress-bar"  value="{{ data[loop.index-1][22]}}" max="100"></progress></td>
-                <th>{{column_names[12]}}</th>
-                <td><progress id="progress-bar"  value="{{ data[loop.index-1][23]}}" max="100"></progress></td></tr>
-                <tr><th>{{column_names[13]}}</th>
-                <td><progress id="progress-bar"  value="{{ data[loop.index-1][24]}}" max="100"></progress></td>
+<!--                relaxruimtes commented out -->
+<!--                <th>{{column_names[10]}}</th>-->
+<!--                <td><progress id="progress-bar"  value="{{ data[loop.index-1][21]}}" max="100"></progress></td></tr>-->
+                <th>&#127860;   {{column_names[11]}}</th>
+                <td><progress id="progress-bar"  value="{{ data[loop.index-1][22]}}" max="100"></progress></td></tr>
+                <tr><th>&#129681;   {{column_names[12]}}</th>
+                <td><progress id="progress-bar"  value="{{ data[loop.index-1][23]}}" max="100"></progress></td>
+                <th>&#128164;   {{column_names[13]}}</th>
+                    {% if data[loop.index-1][24] == 100 %}
+                    <td><div> Aanwezig </div></td>
+                    {% elif data[loop.index-1][24] == 0 %}
+                    <td><div> Niet aanwezig </div></td>
+                    {% else %}
+                    <td><div> Niet bekend </div></td>
+                    {% endif %}
+<!--                <td><progress id="progress-bar"  value="{{ data[loop.index-1][24]}}" max="100"></progress></td>-->
             </tr>
           </thead>
     </table>
