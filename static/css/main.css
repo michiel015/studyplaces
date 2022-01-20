@@ -16,6 +16,9 @@ body {
 a:visited{
   color:black;
 }
+a{
+    color: black;
+}
 
 /* change vertical spacing of list elements */
 li{
