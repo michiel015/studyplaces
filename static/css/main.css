@@ -401,6 +401,9 @@ margin: 0px;
   margin-left: 5%;
   display: inline-flex;
 }
+.methodology-notification{
+    margin-left: 5%;
+}
 .openingstijden{
   width: 50%;
 }
@@ -598,14 +601,13 @@ h3 {
 .tooltip-left {
   position: relative;
   display: inline-block;
-  border-bottom: 1px dotted black;
 }
 
 .tooltip-left .tooltiptext {
   visibility: hidden;
-  width: 120px;
-  background-color: black;
-  color: #fff;
+  width: 200px;
+  background-color: white;
+  color: #000;
   text-align: center;
   border-radius: 6px;
   padding: 5px 0;
@@ -613,6 +615,8 @@ h3 {
   z-index: 1;
   top: -5px;
   right: 110%;
+  padding: 5px;
+  font-size: 0.9em;
 }
 
 .tooltip-left .tooltiptext::after {
@@ -632,14 +636,13 @@ h3 {
 .tooltip-bottom {
   position: relative;
   display: inline-block;
-  border-bottom: 1px dotted black;
 }
 
 .tooltip-bottom .tooltiptext {
   visibility: hidden;
-  width: 120px;
-  background-color: black;
-  color: #fff;
+  width: 200px;
+  background-color: white;
+  color: #000;
   text-align: center;
   border-radius: 6px;
   padding: 5px 0;
@@ -648,6 +651,8 @@ h3 {
   top: 150%;
   left: 50%;
   margin-left: -60px;
+  padding: 5px;
+  font-size: 0.9em;
 }
 
 .tooltip-bottom .tooltiptext::after {
@@ -663,4 +668,18 @@ h3 {
 
 .tooltip-bottom:hover .tooltiptext {
   visibility: visible;
+}
+.methodology-table {
+  text-align: left;
+  padding-left: 38px;
+  padding-right: 38px;
+  max-width: 1140px;
+}
+.methodology-table td {
+  border: 1px solid grey;
+  width: 14%;
+}
+.methodology-table th {
+  border: 1px solid grey;
+  width: 1%;
 }
