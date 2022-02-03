@@ -445,10 +445,10 @@ button {
   position: relative;
 }
 .content-wrapper-about {
-  padding-left: 38px;
-  padding-right: 38px;
-  max-width: 1140px;
+    max-width: 80%;
+    margin: 0 auto;
 }
+
 .navbar-text {
   text-align: center;
   vertical-align: middle;
@@ -669,12 +669,18 @@ h3 {
 .tooltip-bottom:hover .tooltiptext {
   visibility: visible;
 }
+
 .methodology-table {
   text-align: left;
-  padding-left: 38px;
-  padding-right: 38px;
-  max-width: 1140px;
+    max-width: 80%;
+    margin: 0 auto;
 }
+
+.mailchimp-signup-form {
+    max-width: 70%;
+    margin: 0 auto;
+}
+
 .methodology-table td {
   border: 1px solid grey;
   width: 14%;
