@@ -50,7 +50,7 @@ def home():
     # data = c.fetchall()
     explanation_title = "Werkplekwijzer - Vind eenvoudig de beste werkplek bij jou in de buurt"
     explanation_body = "Een goede werkplek vinden buiten kantoor kan een uitdaging zijn. Werkplekwijzer beoordeelt werkplekken in Nederland op verschillende criteria zodat jij de beste werkplek kunt vinden. Wij maken scoreboards en delen ervaringen over werkplekken in jouw omgeving. Hiermee kan je op werkplekwijzer de beste keuze maken voor een werkplek buiten kantoor. Of je nu op zoek bent naar een café met de lekkerste koffie, of een werkplek met het snelste internet. Alle beoordelingen per werkplek zijn eenvoudig te vinden. Alle werkplekken zijn gratis en lopen uiteen van cafés tot bibliotheken. Ideaal als je een keer buiten kantoor wilt werken of een keer ergens anders wilt studeren dan thuis."
-    title = "Werkplekwijzer - Vind eenvoudig de beste werkplek bij jou in de buurt"
+    title = "Werkplekwijzer - Vind de ideale studieplek bij jou in de buurt"
     meta_description = "Een goede werkplek vinden buiten kantoor kan een uitdaging zijn. Werkplekwijzer beoordeelt werkplekken in Nederland op verschillende criteria zodat jij de beste werkplek kunt vinden."
     meta_keywords = "werkplek, werkplekwijzer, flexwerken, werkplekken, rotterdam, amsterdam, den haag, delft"
     meta_viewport = "width=960px"
@@ -313,5 +313,8 @@ def location_page(variable):
     #    yield 'location_page', {'variable': study_location}, f"{now.year}-{now.month}", 'monthly', 0.80
 
 
+import os
+
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=5000)
+    port = int(os.environ.get("PORT", 5001))  # Use PORT from environment if available, else use 5001 locally
+    app.run(debug=True, host="0.0.0.0", port=port)
