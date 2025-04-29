@@ -253,34 +253,27 @@ def location_page(variable):
     c = conn.cursor()
     c.execute("select * from study_locations ORDER BY totale_score DESC;")
     column_names = [description[0] for description in c.description]
-    # format column names automatically
     for i, name in enumerate(column_names):
         new_name = name.split('_')
         new_name[0] = new_name[0].capitalize()
         column_names[i] = " ".join(new_name)
-    # c.execute("SELECT * FROM study_locations WHERE test_column_3 = 'test_data_3'")
     conn.row_factory = dict_factory
     c.execute("select * from study_locations ORDER BY totale_score DESC;")
     data = c.fetchall()
     c.execute("SELECT url_name FROM study_locations ORDER BY totale_score DESC;")
-    # study_locations_tuples is a list of tuples, so for the location we only need the first element of each tuple
     study_locations_tuples = c.fetchall()
     study_locations_list = [study_locations_tuple[-1] for study_locations_tuple in study_locations_tuples]
-    # old query in which a single location is fetched
-    # c.execute("SELECT total_score, price_consumptions_norm, access_hours_norm, google_review FROM study_locations "
-    #           "where city = 'Delft'")
-    # data = c.fetchall()
-if variable in study_locations_list:
-    try:
-        c.execute("SELECT * FROM study_locations WHERE url_name = ?", (variable,))
-        data1 = c.fetchall()
-        return render_template("modal.html", study_locations=variable, data=data1, column_names=column_names)
-    except Exception as e:
-        print("Database error:", e)
-        return render_template("404.html")
-else:
-    return render_template("404.html")
 
+    if variable in study_locations_list:
+        try:
+            c.execute("SELECT * FROM study_locations WHERE url_name = ?", (variable,))
+            data1 = c.fetchall()
+            return render_template("modal.html", study_locations=variable, data=data1, column_names=column_names)
+        except Exception as e:
+            print("Database error:", e)
+            return render_template("404.html")
+    else:
+        return render_template("404.html")
 
 #@ext.register_generator
 #def sitemap():
@@ -292,32 +285,32 @@ else:
  #   """
 
     # establish database connection and make cursor
-    try:
-        conn = sqlite3.connect(db_location)
-    except:
-        print('could not establish connection to db')
-        exit(1)
-    c = conn.cursor()
-    c.execute("select * from study_locations ORDER BY totale_score DESC;")
-    column_names = [description[0] for description in c.description]
+    #try:
+    #    conn = sqlite3.connect(db_location)
+    #except:
+    #    print('could not establish connection to db')
+    #    exit(1)
+    #c = conn.cursor()
+    #c.execute("select * from study_locations ORDER BY totale_score DESC;")
+    #column_names = [description[0] for description in c.description]
     # format column names automatically
-    for i, name in enumerate(column_names):
-        new_name = name.split('_')
-        new_name[0] = new_name[0].capitalize()
-        column_names[i] = " ".join(new_name)
+    #for i, name in enumerate(column_names):
+    #    new_name = name.split('_')
+    #    new_name[0] = new_name[0].capitalize()
+    #    column_names[i] = " ".join(new_name)
     # c.execute("SELECT * FROM study_locations WHERE test_column_3 = 'test_data_3'")
-    conn.row_factory = dict_factory
-    c.execute("select * from study_locations ORDER BY totale_score DESC;")
-    data = c.fetchall()
-    c.execute("SELECT url_name FROM study_locations ORDER BY totale_score DESC;")
+    #conn.row_factory = dict_factory
+    #c.execute("select * from study_locations ORDER BY totale_score DESC;")
+    #data = c.fetchall()
+    #c.execute("SELECT url_name FROM study_locations ORDER BY totale_score DESC;")
     # study_locations_tuples is a list of tuples, so for the location we only need the first element of each tuple
-    study_locations_tuples = c.fetchall()
-    study_locations_list = [study_locations_tuple[-1] for study_locations_tuple in study_locations_tuples]
+    #study_locations_tuples = c.fetchall()
+    #study_locations_list = [study_locations_tuple[-1] for study_locations_tuple in study_locations_tuples]
 
-    for study_location in study_locations_list:
-        now = datetime.datetime.now()
-        # function, variable: dynamic value, LastMod, Updatefrequency, priority
-        yield 'location_page', {'variable': study_location}, f"{now.year}-{now.month}", 'monthly', 0.80
+    #for study_location in study_locations_list:
+    #    now = datetime.datetime.now()
+    #    # function, variable: dynamic value, LastMod, Updatefrequency, priority
+    #    yield 'location_page', {'variable': study_location}, f"{now.year}-{now.month}", 'monthly', 0.80
 
 
 if __name__ == "__main__":
