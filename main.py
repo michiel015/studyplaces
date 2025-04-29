@@ -282,11 +282,11 @@ def location_page(variable):
 #@ext.register_generator
 #def sitemap():
  #   """Dynamically create a sitemap
-    The 'SITEMAP_INCLUDE_RULES_WITHOUT_PARAMS' parameter takes care of the static pages.
-    For the dynamic pages we iterate over all study locations contained in the dataset, which will be the 'variable'
-    in the dynamic location_page function.
-    :return:
-    """
+ #   The 'SITEMAP_INCLUDE_RULES_WITHOUT_PARAMS' parameter takes care of the static pages.
+ #   For the dynamic pages we iterate over all study locations contained in the dataset, which will be the 'variable'
+ #   in the dynamic location_page function.
+ #   :return:
+ #   """
 
     # establish database connection and make cursor
     try:
