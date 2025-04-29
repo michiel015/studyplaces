@@ -1,7 +1,7 @@
 # __author__: Adarsh Kalikadien #
 import sqlite3
 from flask import Flask, render_template, url_for
-from flask_sitemap import Sitemap
+from flask_sitemap_fork import Sitemap
 import socket
 import datetime
 
