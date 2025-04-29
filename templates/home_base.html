@@ -116,14 +116,15 @@
 
     <aside class="footer-center">
 <h3> <b>Quick Links: </b></h3>
-<h4><a href="https://www.werkplekwijzer.nl/" style="color: inherit;"target="_blank">Home</a>
-<br><a href="https://www.werkplekwijzer.nl/den_haag" style="color: inherit;"target="_blank">Den Haag</a>
-<br><a href="https://www.werkplekwijzer.nl/rotterdam" style="color: inherit;"target="_blank">Rotterdam</a>
-<br><a href="https://www.werkplekwijzer.nl/amsterdam" style="color: inherit;"target="_blank">Amsterdam</a>
-<br><a href="https://www.werkplekwijzer.nl/delft" style="color: inherit;"target="_blank">Delft</a>
-<br><a href="https://www.werkplekwijzer.nl/plek_toevoegen" style="color: inherit;"target="_blank">Plek toevoegen</a>
-<br><a href="https://www.werkplekwijzer.nl/about" style="color: inherit;"target="_blank">Over Werkplekwijzer.nl</a>
-<br><a href="https://www.werkplekwijzer.nl/sitemap.xml" style="color: inherit;"target="_blank">Sitemap</a></h4>
-    </aside>
+<h4>
+<a href="{{ url_for('home') }}" style="color: inherit;">Home</a><br>
+<a href="{{ url_for('den_haag_filter') }}" style="color: inherit;">Den Haag</a><br>
+<a href="{{ url_for('rotterdam_filter') }}" style="color: inherit;">Rotterdam</a><br>
+<a href="{{ url_for('amsterdam_filter') }}" style="color: inherit;">Amsterdam</a><br>
+<a href="{{ url_for('delft_filter') }}" style="color: inherit;">Delft</a><br>
+<a href="{{ url_for('plek_toevoegen') }}" style="color: inherit;">Plek toevoegen</a><br>
+<a href="{{ url_for('about') }}" style="color: inherit;">Over Werkplekwijzer.nl</a><br>
+</h4>
+</aside>
 </footer>
 </html>
