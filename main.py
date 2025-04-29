@@ -1,15 +1,15 @@
 # __author__: Adarsh Kalikadien #
 import sqlite3
 from flask import Flask, render_template, url_for
-from flask_sitemap_fork import Sitemap
+#from flask_sitemap_fork import Sitemap
 import socket
 import datetime
 
 from utilities import *
 app = Flask(__name__)
-app.config['SITEMAP_INCLUDE_RULES_WITHOUT_PARAMS'] = True
-app.config['SITEMAP_IGNORE_ENDPOINTS'] = ['sitemap.xml', 'robot', 'test1']
-ext = Sitemap(app=app)
+#app.config['SITEMAP_INCLUDE_RULES_WITHOUT_PARAMS'] = True
+#app.config['SITEMAP_IGNORE_ENDPOINTS'] = ['sitemap.xml', 'robot', 'test1']
+#ext = Sitemap(app=app)
 
 
 hostname = socket.gethostname()
@@ -279,9 +279,9 @@ def location_page(variable):
         return render_template("404.html")
 
 
-@ext.register_generator
-def sitemap():
-    """Dynamically create a sitemap
+#@ext.register_generator
+#def sitemap():
+ #   """Dynamically create a sitemap
     The 'SITEMAP_INCLUDE_RULES_WITHOUT_PARAMS' parameter takes care of the static pages.
     For the dynamic pages we iterate over all study locations contained in the dataset, which will be the 'variable'
     in the dynamic location_page function.
